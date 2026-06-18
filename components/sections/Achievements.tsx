@@ -78,27 +78,41 @@ export function Achievements() {
         {achievementsByType.Contest.length > 0 && (
           <ScrollReveal delay={0.05}>
             <div className="mb-20">
-              <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
+              {/* <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
                 <Award className="w-7 h-7 text-accent" />
                 Programming Contests
-              </h2>
+              </h2> */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {achievementsByType.Contest.map((achievement) => (
                   <div
                     key={achievement.id}
-                    className="p-6 rounded-xl border border-border glass card-hover hover:border-accent space-y-3"
+                    className="group rounded-xl border border-border glass overflow-hidden card-hover hover:border-accent"
                   >
-                    <div className="flex items-start justify-between gap-4">
-                      <h3 className="text-lg font-bold leading-tight hover:text-accent transition-colors">
-                        {achievement.title}
-                      </h3>
-                      <span className="flex-shrink-0 text-sm font-bold text-accent bg-accent/10 px-3 py-1 rounded-full">
-                        {achievement.year}
-                      </span>
+                    {achievement.image && (
+                      <div className="relative h-48 overflow-hidden bg-muted/50">
+                        <Image
+                          src={achievement.image}
+                          alt={achievement.title}
+                          fill
+                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      </div>
+                    )}
+
+                    <div className="p-6 space-y-3">
+                      <div className="flex items-start justify-between gap-4">
+                        <h3 className="text-lg font-bold leading-tight group-hover:text-accent transition-colors">
+                          {achievement.title}
+                        </h3>
+                        <span className="flex-shrink-0 text-sm font-bold text-accent bg-accent/10 px-3 py-1 rounded-full">
+                          {achievement.year}
+                        </span>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {achievement.description}
+                      </p>
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {achievement.description}
-                    </p>
                   </div>
                 ))}
               </div>
@@ -136,7 +150,7 @@ export function Achievements() {
           </ScrollReveal>
         )}
 
-        {/* Milestones Section */}
+        {/* Milestones Section
         {achievementsByType.Milestone.length > 0 && (
           <ScrollReveal delay={0.1}>
             <div>
@@ -168,7 +182,7 @@ export function Achievements() {
               </div>
             </div>
           </ScrollReveal>
-        )}
+        )} */}
       </div>
     </section>
   )

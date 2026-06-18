@@ -23,24 +23,25 @@ const firaCode = Fira_Code({
 })
 
 export const metadata: Metadata = {
-  title: 'MD Raisul Islam Rahad | Robotics Engineer & Full-Stack Developer',
-  description: 'Portfolio of MD Raisul Islam Rahad - Robotics engineer, competitive programmer, and full-stack developer. URC 2026 participant, MIST Mars Rover Society lead.',
-  generator: 'v0.app',
+  title: "MD Raisul Islam Rahad | Robotics Engineer & Full-Stack Developer",
+  description:
+    "Portfolio of MD Raisul Islam Rahad - Robotics engineer, competitive programmer, and full-stack developer. URC 2026 participant, MIST Mars Rover Society lead.",
+  generator: "v0.app",
   keywords: [
-    'robotics',
-    'full-stack developer',
-    'competitive programming',
-    'Mars Rover Challenge',
-    'autonomous systems',
+    "robotics",
+    "full-stack developer",
+    "competitive programming",
+    "Mars Rover Challenge",
+    "autonomous systems",
   ],
-  authors: [{ name: 'MD Raisul Islam Rahad' }],
+  authors: [{ name: "MD Raisul Islam Rahad" }],
   openGraph: {
-    title: 'MD Raisul Islam Rahad | Portfolio',
-    description: 'Robotics engineer and full-stack developer',
-    type: 'website',
-    locale: 'en_US',
+    title: "MD Raisul Islam Rahad | Portfolio",
+    description: "Robotics enthusiast and full-stack developer",
+    type: "website",
+    locale: "en_US",
   },
-}
+};
 
 export const viewport: Viewport = {
   colorScheme: 'light dark',
