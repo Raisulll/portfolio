@@ -97,7 +97,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden pt-32 pb-24 bg-background min-h-[92vh] flex items-center"
+      className="relative overflow-hidden bg-background flex items-center pt-28 pb-16 sm:pt-32 sm:pb-24 min-h-[100svh] lg:min-h-[92vh]"
     >
       {/* Background layers */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -109,10 +109,33 @@ export function Hero() {
       </div>
 
       <div className="max-w-6xl mx-auto px-6 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+          {/* Profile Image — shown on every breakpoint (compact + centered on mobile) */}
           <motion.div
-            className="space-y-7"
+            className="relative order-1 lg:order-2 mx-auto w-44 sm:w-60 lg:mx-0 lg:w-full lg:max-w-md"
+            initial={{ opacity: 0, scale: 0.94, y: 16 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {/* Rotating glow ring */}
+            <div className="absolute inset-0 -z-10 animate-spin-slow rounded-[2.5rem] bg-[conic-gradient(from_0deg,var(--accent),transparent_40%,var(--primary),transparent_75%,var(--accent))] opacity-30 blur-2xl" />
+
+            <div className="animate-float relative aspect-square overflow-hidden rounded-[1.75rem] lg:rounded-[2rem] border border-border/60 bg-background shadow-[0_24px_100px_-50px_rgba(0,0,0,0.5)]">
+              <Image
+                src="/images/profile_headshot.png"
+                alt={siteConfig.name}
+                fill
+                sizes="(max-width: 640px) 11rem, (max-width: 1024px) 15rem, 28rem"
+                className="object-cover object-center"
+                priority
+              />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(100,255,218,0.14),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.04),transparent_45%)]" />
+            </div>
+          </motion.div>
+
+          {/* Text content */}
+          <motion.div
+            className="order-2 lg:order-1 space-y-6 sm:space-y-7 text-center lg:text-left"
             variants={container}
             initial="hidden"
             animate="visible"
@@ -125,7 +148,7 @@ export function Hero() {
                 </span>
                 Aspiring Software Engineer
               </p>
-              <h1 className="text-5xl lg:text-6xl font-bold leading-[1.05] text-balance">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] sm:leading-[1.05] text-balance">
                 {siteConfig.name.split(' ').map((word, i) => (
                   <span key={i} className={i >= 2 ? 'text-gradient-animated' : ''}>
                     {word}{' '}
@@ -135,15 +158,15 @@ export function Hero() {
             </motion.div>
 
             {/* Typewriter Effect */}
-            <motion.div className="h-14 flex items-center" variants={item}>
-              <p className="text-2xl lg:text-3xl font-semibold text-muted-foreground">
+            <motion.div className="h-12 sm:h-14 flex items-center justify-center lg:justify-start" variants={item}>
+              <p className="text-xl sm:text-2xl lg:text-3xl font-semibold text-muted-foreground">
                 {displayText}
-                <span className="ml-1 inline-block w-[3px] -mb-1 h-7 bg-accent animate-blink align-middle" />
+                <span className="ml-1 inline-block w-[3px] -mb-1 h-6 sm:h-7 bg-accent animate-blink align-middle" />
               </p>
             </motion.div>
 
             <motion.p
-              className="text-lg text-muted-foreground leading-relaxed max-w-xl"
+              className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0"
               variants={item}
             >
               I engineer scalable software — from full stack web platforms to
@@ -151,7 +174,7 @@ export function Hero() {
             </motion.p>
 
             {/* CTA Buttons */}
-            <motion.div className="flex flex-col sm:flex-row gap-4 pt-2" variants={item}>
+            <motion.div className="flex flex-col sm:flex-row gap-4 pt-2 justify-center lg:justify-start" variants={item}>
               <Link
                 href="/projects"
                 className="group inline-flex items-center justify-center px-6 py-3 bg-accent text-accent-foreground font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30"
@@ -170,7 +193,7 @@ export function Hero() {
             </motion.div>
 
             {/* Social Links */}
-            <motion.div className="flex items-center gap-4 pt-2" variants={item}>
+            <motion.div className="flex flex-wrap items-center gap-x-4 gap-y-3 pt-2 justify-center lg:justify-start" variants={item}>
               <p className="text-sm text-muted-foreground">Connect with me:</p>
               <div className="flex gap-3">
                 {socialLinks.map((link) => {
@@ -190,39 +213,6 @@ export function Hero() {
                   );
                 })}
               </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Right - Profile Image */}
-          <motion.div
-            className="relative hidden lg:block"
-            initial={{ opacity: 0, scale: 0.94, x: 40 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-          >
-            {/* Rotating glow ring */}
-            <div className="absolute inset-0 -z-10 animate-spin-slow rounded-[2.5rem] bg-[conic-gradient(from_0deg,var(--accent),transparent_40%,var(--primary),transparent_75%,var(--accent))] opacity-30 blur-2xl" />
-
-            <div className="animate-float relative aspect-square overflow-hidden rounded-[2rem] border border-border/60 bg-background shadow-[0_24px_100px_-50px_rgba(0,0,0,0.5)]">
-              <Image
-                src="/images/profile_headshot.png"
-                alt={siteConfig.name}
-                fill
-                className="object-cover object-center"
-                priority
-              />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(100,255,218,0.14),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.04),transparent_45%)]" />
-            </div>
-
-            {/* Floating badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.6 }}
-              className="absolute -bottom-5 -left-5 rounded-2xl border border-border bg-card/90 px-5 py-3 backdrop-blur-xl shadow-xl"
-            >
-              <p className="text-sm font-bold text-accent">URC 2026</p>
-              <p className="text-xs text-muted-foreground">11th Place Worldwide</p>
             </motion.div>
           </motion.div>
         </div>

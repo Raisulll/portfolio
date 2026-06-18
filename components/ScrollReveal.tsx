@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, type Variants } from 'framer-motion'
+import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import { ReactNode } from 'react'
 import { useInView } from 'react-intersection-observer'
 
@@ -34,31 +34,45 @@ export function ScrollReveal({
   blur = true,
   className,
 }: ScrollRevealProps) {
+  const prefersReducedMotion = useReducedMotion()
+
   const { ref, inView } = useInView({
-    threshold: 0.12,
+    // A low threshold keeps blocks taller than the viewport (common on
+    // mobile) from getting stuck hidden because they can never reach a
+    // higher visible ratio.
+    threshold: 0,
     triggerOnce: true,
-    rootMargin: '0px 0px -40px 0px',
+    rootMargin: '0px 0px -10% 0px',
+    // If IntersectionObserver is unavailable, treat content as visible
+    // instead of leaving it permanently hidden.
+    fallbackInView: true,
   })
 
   const offset = offsets[direction] ?? offsets.up
 
-  const variants: Variants = {
-    hidden: {
-      opacity: 0,
-      x: offset.x ?? 0,
-      y: offset.y ?? 0,
-      scale: offset.scale ?? 1,
-      filter: blur ? 'blur(8px)' : 'blur(0px)',
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      scale: 1,
-      filter: 'blur(0px)',
-      transition: { duration, delay, ease: EASE },
-    },
-  }
+  // Honor reduced-motion: render content in place with no transform/blur.
+  const variants: Variants = prefersReducedMotion
+    ? {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 0.2, delay } },
+      }
+    : {
+        hidden: {
+          opacity: 0,
+          x: offset.x ?? 0,
+          y: offset.y ?? 0,
+          scale: offset.scale ?? 1,
+          filter: blur ? 'blur(8px)' : 'blur(0px)',
+        },
+        visible: {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          scale: 1,
+          filter: 'blur(0px)',
+          transition: { duration, delay, ease: EASE },
+        },
+      }
 
   return (
     <motion.div

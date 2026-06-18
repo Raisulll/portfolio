@@ -1,17 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <defs>
-    <linearGradient id="bg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0a192f" />
-      <stop offset="1" stop-color="#112240" />
-    </linearGradient>
-    <linearGradient id="accent" x1="18" y1="16" x2="46" y2="48" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#64ffda" />
-      <stop offset="1" stop-color="#3b82f6" />
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="18" fill="url(#bg)" />
-  <path
-    d="M22 16h17.5c7.5 0 12.5 4.5 12.5 11.5 0 5.3-2.9 9.1-7.7 10.8L51 48H41.5l-6.2-8.7H31V48h-9V16zm9 7v6.5h8c2.2 0 3.6-1.2 3.6-3.2 0-2.1-1.4-3.3-3.6-3.3H31z"
-    fill="url(#accent)"
-  />
+  <circle cx="32" cy="32" r="32" fill="#ffffff" />
+  <text
+    x="32"
+    y="35"
+    text-anchor="middle"
+    dominant-baseline="central"
+    font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+    font-size="40"
+    font-weight="700"
+    fill="#0a192f"
+  >R</text>
 </svg>
