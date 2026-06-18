@@ -98,7 +98,7 @@ export function About() {
                     <div className="space-y-4">
                       <h2 className="text-2xl font-bold">Beyond code</h2>
                       <p className="text-lg text-muted-foreground leading-relaxed">
-                        I&apos;ve solved 500+ problems across Codeforces,
+                        I&apos;ve solved problems across Codeforces,
                         CodeChef, and LeetCode — not out of obligation, but
                         because I genuinely enjoy the puzzle. I compete in ICPC,
                         mentor students at the MIST Computer Club, and try to

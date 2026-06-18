@@ -2,9 +2,9 @@
 
 import { AnimatedCounter, Stagger, StaggerItem } from '@/components/motion'
 import { highlightStats } from '@/lib/data'
-import { Award, Code2, Trophy, Users } from 'lucide-react'
+import { Award, Trophy, Users } from 'lucide-react'
 
-const icons = [Trophy, Award, Code2, Users]
+const icons = [Trophy, Award, Users]
 
 // Split a stat value like "500+" or "11th Place" into a leading number + the rest,
 // so the numeric part can count up while text stays intact.
@@ -18,7 +18,7 @@ export function Highlights() {
   return (
     <section className="relative py-20 bg-card/30">
       <div className="max-w-6xl mx-auto px-6">
-        <Stagger className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <Stagger className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {highlightStats.map((stat, index) => {
             const Icon = icons[index % icons.length]
             const { number, suffix } = parseValue(stat.value)

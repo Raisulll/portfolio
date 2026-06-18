@@ -697,12 +697,12 @@ export const achievements = [
   },
   {
     id: 6,
-    title: 'Competitive Programming — 500+ Problems Solved',
+    title: 'Competitive Programming',
     year: 2023,
     type: 'Milestone',
     image: null,
     description:
-      'Solved 500+ problems across Codeforces (Pupil, rating 1290) and CodeChef (3★, rating 1600), competing regularly in ICPC and national programming contests.',
+      'Active competitive programmer on Codeforces (Pupil, rating 1290) and CodeChef (3★, rating 1600), competing regularly in ICPC and national programming contests.',
   },
 ];
 
@@ -721,8 +721,6 @@ export const education = [
   },
 ];
 export const highlightStats = [
-  { label: 'URC 2026', value: '11th Place' },
-  { label: 'Anatolian Rover', value: '1st Runners-Up' },
-  { label: 'Problems Solved', value: '500+' },
-  { label: 'Team Members Led', value: '50+' },
+  { label: 'University Rover Challenge 2026', value: '11th Place' },
+  { label: 'Anatolian Rover Challenge 2024', value: '1st Runners-Up' },
 ];
