@@ -1,0 +1,108 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Codebook competitive programming cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a192f"/>
+      <stop offset="1" stop-color="#112240"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientTransform="translate(360 320) rotate(45) scale(560)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#64ffda" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientTransform="translate(1240 540) rotate(45) scale(560)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="120" y1="700" x2="640" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glowA)"/>
+  <rect width="1600" height="900" fill="url(#glowB)"/>
+
+  <!-- Code editor panel -->
+  <g>
+    <rect x="150" y="210" width="620" height="470" rx="22" fill="#0e2742" stroke="#64ffda" stroke-opacity="0.35" stroke-width="2"/>
+    <!-- title bar -->
+    <circle cx="190" cy="248" r="7" fill="#64ffda" fill-opacity="0.8"/>
+    <circle cx="214" cy="248" r="7" fill="#3b82f6" fill-opacity="0.7"/>
+    <circle cx="238" cy="248" r="7" fill="#8892b0" fill-opacity="0.5"/>
+    <text x="640" y="254" font-family="Consolas, monospace" font-size="16" fill="#8892b0">dijkstra.cpp</text>
+    <line x1="150" y1="282" x2="770" y2="282" stroke="#1e3a5f" stroke-width="2"/>
+    <!-- gutter -->
+    <line x1="232" y1="282" x2="232" y2="680" stroke="#1e3a5f" stroke-width="2"/>
+    <g fill="#8892b0" fill-opacity="0.5" font-family="Consolas, monospace" font-size="15">
+      <text x="200" y="328">1</text><text x="200" y="360">2</text><text x="200" y="392">3</text>
+      <text x="200" y="424">4</text><text x="200" y="456">5</text><text x="200" y="488">6</text>
+      <text x="200" y="520">7</text><text x="200" y="552">8</text>
+    </g>
+    <!-- code lines -->
+    <g>
+      <rect x="260" y="316" width="120" height="13" rx="6" fill="#64ffda" fill-opacity="0.85"/>
+      <rect x="392" y="316" width="150" height="13" rx="6" fill="#ccd6f6" fill-opacity="0.7"/>
+      <rect x="288" y="348" width="90" height="13" rx="6" fill="#3b82f6" fill-opacity="0.8"/>
+      <rect x="390" y="348" width="200" height="13" rx="6" fill="#ccd6f6" fill-opacity="0.55"/>
+      <rect x="288" y="380" width="170" height="13" rx="6" fill="#ccd6f6" fill-opacity="0.6"/>
+      <rect x="316" y="412" width="120" height="13" rx="6" fill="#64ffda" fill-opacity="0.7"/>
+      <rect x="448" y="412" width="160" height="13" rx="6" fill="#ccd6f6" fill-opacity="0.5"/>
+      <rect x="316" y="444" width="220" height="13" rx="6" fill="#ccd6f6" fill-opacity="0.55"/>
+      <rect x="288" y="476" width="110" height="13" rx="6" fill="#3b82f6" fill-opacity="0.8"/>
+      <rect x="410" y="476" width="180" height="13" rx="6" fill="#ccd6f6" fill-opacity="0.5"/>
+      <rect x="288" y="508" width="150" height="13" rx="6" fill="#ccd6f6" fill-opacity="0.55"/>
+      <rect x="260" y="540" width="80" height="13" rx="6" fill="#64ffda" fill-opacity="0.7"/>
+    </g>
+    <!-- Big-O / AI tag -->
+    <g transform="translate(470 600)">
+      <rect x="0" y="0" width="250" height="46" rx="23" fill="#64ffda" fill-opacity="0.12" stroke="#64ffda" stroke-opacity="0.5"/>
+      <path d="M34 23 l7 17 17 7 -17 7 -7 17 -7 -17 -17 -7 17 -7 z" fill="#64ffda"/>
+      <text x="68" y="30" font-family="Consolas, monospace" font-size="19" font-weight="700" fill="#64ffda">O(n log n)</text>
+    </g>
+  </g>
+
+  <!-- collect-to-cart badge -->
+  <g transform="translate(700 250)">
+    <circle cx="0" cy="0" r="42" fill="#10233f" stroke="#64ffda" stroke-opacity="0.5" stroke-width="2"/>
+    <g stroke="#64ffda" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(-20 -18)">
+      <path d="M2 2 h7 l5 26 h22 l5 -16 h-30"/>
+      <circle cx="16" cy="36" r="3.5" fill="#64ffda"/>
+      <circle cx="34" cy="36" r="3.5" fill="#64ffda"/>
+    </g>
+    <circle cx="26" cy="-26" r="15" fill="#3b82f6"/>
+    <text x="26" y="-20" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700" fill="#ffffff">5</text>
+  </g>
+
+  <!-- generated codebook PDF -->
+  <g transform="translate(980 250)">
+    <!-- stacked pages -->
+    <rect x="40" y="30" width="300" height="380" rx="14" fill="#0e2742" stroke="#1e3a5f" stroke-width="2"/>
+    <rect x="20" y="14" width="300" height="380" rx="14" fill="#10233f" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="2"/>
+    <!-- top page -->
+    <path d="M0 0 h220 l40 40 v340 a8 8 0 0 1 -8 8 h-252 a8 8 0 0 1 -8 -8 v-372 a8 8 0 0 1 8 -8 Z" fill="#112a4a" stroke="#64ffda" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M220 0 v40 h40 Z" fill="#64ffda" fill-opacity="0.25"/>
+    <!-- heading -->
+    <rect x="28" y="60" width="150" height="18" rx="6" fill="#64ffda" fill-opacity="0.8"/>
+    <!-- mini code blocks -->
+    <rect x="28" y="98" width="204" height="58" rx="8" fill="#0a192f" stroke="#1e3a5f"/>
+    <g fill="#8892b0" fill-opacity="0.6"><rect x="40" y="110" width="120" height="8" rx="4"/><rect x="40" y="126" width="160" height="8" rx="4"/><rect x="40" y="142" width="90" height="8" rx="4"/></g>
+    <rect x="28" y="172" width="204" height="58" rx="8" fill="#0a192f" stroke="#1e3a5f"/>
+    <g fill="#8892b0" fill-opacity="0.6"><rect x="40" y="184" width="150" height="8" rx="4"/><rect x="40" y="200" width="110" height="8" rx="4"/><rect x="40" y="216" width="170" height="8" rx="4"/></g>
+    <g fill="#8892b0" fill-opacity="0.45"><rect x="28" y="252" width="204" height="8" rx="4"/><rect x="28" y="270" width="180" height="8" rx="4"/><rect x="28" y="288" width="204" height="8" rx="4"/></g>
+    <!-- PDF badge -->
+    <g transform="translate(150 330)">
+      <rect x="0" y="0" width="92" height="34" rx="8" fill="#e2542f"/>
+      <text x="46" y="24" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#ffffff">PDF</text>
+    </g>
+  </g>
+
+  <!-- tag -->
+  <g transform="translate(120 250)">
+    <rect x="0" y="0" width="380" height="44" rx="22" fill="#64ffda" fill-opacity="0.12" stroke="#64ffda" stroke-opacity="0.4"/>
+    <circle cx="28" cy="22" r="5" fill="#64ffda"/>
+    <text x="48" y="29" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#64ffda" letter-spacing="1">COMPETITIVE PROGRAMMING · DESKTOP</text>
+  </g>
+
+  <text x="120" y="772" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="80" font-weight="800" fill="url(#title)">Codebook</text>
+  <text x="124" y="822" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="27" font-weight="500" fill="#8892b0">Share Code · Build a Codebook PDF · AI Complexity Insights</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Autonomous human-following trolley thumbnail">
+  <defs>
+    <linearGradient id="tbg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a192f"/>
+      <stop offset="1" stop-color="#112240"/>
+    </linearGradient>
+    <radialGradient id="tglow" cx="0" cy="0" r="1" gradientTransform="translate(300 320) rotate(40) scale(620)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#64ffda" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tcone" x1="280" y1="360" x2="800" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#64ffda" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="ttitle" x1="340" y1="660" x2="860" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#tbg)"/>
+  <rect width="1200" height="800" fill="url(#tglow)"/>
+
+  <!-- vision cone -->
+  <path d="M330 360 L820 250 L820 500 Z" fill="url(#tcone)"/>
+  <g fill="#64ffda">
+    <circle cx="470" cy="355" r="4" opacity="0.7"/>
+    <circle cx="560" cy="330" r="4" opacity="0.6"/>
+    <circle cx="560" cy="395" r="4" opacity="0.5"/>
+    <circle cx="680" cy="315" r="4" opacity="0.45"/>
+    <circle cx="680" cy="425" r="4" opacity="0.4"/>
+  </g>
+
+  <!-- ZED camera + arcs -->
+  <path d="M330,220 A150,150 0 0 1 330,500" stroke="#64ffda" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+  <path d="M330,270 A100,100 0 0 1 330,450" stroke="#64ffda" stroke-opacity="0.45" stroke-width="2" fill="none"/>
+  <rect x="210" y="320" width="120" height="80" rx="16" fill="#0e2742" stroke="#64ffda" stroke-opacity="0.6" stroke-width="2"/>
+  <circle cx="248" cy="360" r="17" fill="#0a192f" stroke="#64ffda" stroke-width="3"/>
+  <circle cx="292" cy="360" r="17" fill="#0a192f" stroke="#64ffda" stroke-width="3"/>
+  <circle cx="248" cy="360" r="6" fill="#64ffda"/>
+  <circle cx="292" cy="360" r="6" fill="#64ffda"/>
+
+  <!-- person + bounding box -->
+  <g fill="#ccd6f6">
+    <circle cx="900" cy="300" r="30"/>
+    <path d="M860 372 a40 40 0 0 1 80 0 v82 a16 16 0 0 1 -16 16 h-48 a16 16 0 0 1 -16 -16 Z"/>
+    <rect x="874" y="478" width="20" height="76" rx="9"/>
+    <rect x="908" y="478" width="20" height="76" rx="9"/>
+  </g>
+  <rect x="822" y="250" width="156" height="320" stroke="#64ffda" stroke-width="2.5" stroke-dasharray="10 8" fill="none" rx="6"/>
+  <g stroke="#64ffda" stroke-width="5" stroke-linecap="round">
+    <path d="M822 276 V250 H848"/>
+    <path d="M952 250 H978 V276"/>
+    <path d="M978 544 V570 H952"/>
+    <path d="M848 570 H822 V544"/>
+  </g>
+
+  <text x="600" y="690" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="58" font-weight="800" fill="url(#ttitle)" text-anchor="middle">Autonomous Trolley</text>
+  <text x="600" y="730" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="500" fill="#8892b0" text-anchor="middle">Human-Following · ROS2</text>
+</svg>

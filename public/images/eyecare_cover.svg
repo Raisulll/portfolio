@@ -1,0 +1,132 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EyeCare healthcare platform cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a192f"/>
+      <stop offset="1" stop-color="#112240"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientTransform="translate(360 320) rotate(45) scale(560)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#64ffda" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientTransform="translate(1180 430) rotate(45) scale(520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="iris" cx="0" cy="0" r="1" gradientTransform="translate(1180 430) scale(64)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda"/>
+      <stop offset="1" stop-color="#0e8f86"/>
+    </radialGradient>
+    <linearGradient id="title" x1="120" y1="700" x2="560" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glowA)"/>
+  <rect width="1600" height="900" fill="url(#glowB)"/>
+
+  <!-- dashboard panel -->
+  <g>
+    <rect x="140" y="210" width="560" height="470" rx="22" fill="#0e2742" stroke="#64ffda" stroke-opacity="0.35" stroke-width="2"/>
+    <circle cx="180" cy="248" r="7" fill="#64ffda" fill-opacity="0.8"/>
+    <circle cx="204" cy="248" r="7" fill="#3b82f6" fill-opacity="0.7"/>
+    <circle cx="228" cy="248" r="7" fill="#8892b0" fill-opacity="0.5"/>
+    <text x="560" y="254" font-family="Consolas, monospace" font-size="15" fill="#8892b0">dashboard</text>
+    <line x1="140" y1="282" x2="700" y2="282" stroke="#1e3a5f" stroke-width="2"/>
+
+    <!-- appointment card -->
+    <rect x="172" y="312" width="496" height="124" rx="14" fill="#10233f" stroke="#1e3a5f" stroke-width="2"/>
+    <circle cx="224" cy="358" r="26" fill="#64ffda" fill-opacity="0.18" stroke="#64ffda" stroke-width="2"/>
+    <path d="M224 348 a10 10 0 0 1 0 0 m-12 26 a12 12 0 0 1 24 0" stroke="#64ffda" stroke-width="3" fill="none"/>
+    <circle cx="224" cy="350" r="8" fill="none" stroke="#64ffda" stroke-width="3"/>
+    <rect x="266" y="338" width="180" height="14" rx="7" fill="#ccd6f6" fill-opacity="0.8"/>
+    <rect x="266" y="362" width="120" height="12" rx="6" fill="#8892b0" fill-opacity="0.6"/>
+    <g transform="translate(266 388)">
+      <rect x="0" y="0" width="150" height="28" rx="14" fill="#0a192f" stroke="#1e3a5f"/>
+      <circle cx="20" cy="14" r="5" fill="#64ffda"/>
+      <text x="34" y="19" font-family="Consolas, monospace" font-size="13" fill="#8892b0">Mon · 10:30 AM</text>
+    </g>
+    <g transform="translate(556 386)">
+      <rect x="0" y="0" width="92" height="32" rx="16" fill="#64ffda"/>
+      <text x="46" y="21" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0a192f">Book</text>
+    </g>
+
+    <!-- prescription card -->
+    <rect x="172" y="456" width="496" height="178" rx="14" fill="#10233f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="196" y="498" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#64ffda">Rx</text>
+    <rect x="244" y="480" width="200" height="14" rx="7" fill="#ccd6f6" fill-opacity="0.7"/>
+    <g fill="#8892b0" fill-opacity="0.55">
+      <rect x="196" y="522" width="440" height="11" rx="5"/>
+      <rect x="196" y="546" width="440" height="11" rx="5"/>
+      <rect x="196" y="570" width="360" height="11" rx="5"/>
+      <rect x="196" y="594" width="410" height="11" rx="5"/>
+    </g>
+  </g>
+
+  <!-- Eye + connected stakeholders -->
+  <g>
+    <!-- orbit -->
+    <circle cx="1180" cy="430" r="200" stroke="#64ffda" stroke-opacity="0.18" stroke-width="2" fill="none"/>
+    <!-- connectors -->
+    <g stroke="#64ffda" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="6 7">
+      <line x1="1180" y1="430" x2="1180" y2="230"/>
+      <line x1="1180" y1="430" x2="1370" y2="368"/>
+      <line x1="1180" y1="430" x2="1298" y2="592"/>
+      <line x1="1180" y1="430" x2="1062" y2="592"/>
+      <line x1="1180" y1="430" x2="990" y2="368"/>
+    </g>
+
+    <!-- eye -->
+    <path d="M1050 430 Q1180 348 1310 430 Q1180 512 1050 430 Z" fill="#0a192f" stroke="#64ffda" stroke-width="3"/>
+    <circle cx="1180" cy="430" r="58" fill="url(#iris)"/>
+    <circle cx="1180" cy="430" r="24" fill="#0a192f"/>
+    <circle cx="1198" cy="412" r="9" fill="#ffffff" fill-opacity="0.8"/>
+
+    <!-- nodes -->
+    <!-- doctor (cross) top -->
+    <g transform="translate(1180 230)">
+      <circle r="32" fill="#10233f" stroke="#64ffda" stroke-opacity="0.55" stroke-width="2"/>
+      <rect x="-5" y="-14" width="10" height="28" rx="3" fill="#64ffda"/>
+      <rect x="-14" y="-5" width="28" height="10" rx="3" fill="#64ffda"/>
+    </g>
+    <!-- patient (person) top-right -->
+    <g transform="translate(1370 368)">
+      <circle r="32" fill="#10233f" stroke="#64ffda" stroke-opacity="0.55" stroke-width="2"/>
+      <circle cy="-8" r="8" fill="#64ffda"/>
+      <path d="M-13 16 a13 13 0 0 1 26 0 Z" fill="#64ffda"/>
+    </g>
+    <!-- delivery (truck) bottom-right -->
+    <g transform="translate(1298 592)">
+      <circle r="32" fill="#10233f" stroke="#64ffda" stroke-opacity="0.55" stroke-width="2"/>
+      <g stroke="#64ffda" stroke-width="2.5" fill="none">
+        <rect x="-16" y="-9" width="20" height="16" rx="2"/>
+        <path d="M4 -3 h9 l5 6 v6 h-14 Z"/>
+      </g>
+      <circle cx="-8" cy="11" r="4" fill="#64ffda"/>
+      <circle cx="10" cy="11" r="4" fill="#64ffda"/>
+    </g>
+    <!-- pharmacy (Rx) bottom-left -->
+    <g transform="translate(1062 592)">
+      <circle r="32" fill="#10233f" stroke="#64ffda" stroke-opacity="0.55" stroke-width="2"/>
+      <text x="0" y="9" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#64ffda">Rx</text>
+    </g>
+    <!-- hospital (building) left -->
+    <g transform="translate(990 368)">
+      <circle r="32" fill="#10233f" stroke="#64ffda" stroke-opacity="0.55" stroke-width="2"/>
+      <rect x="-13" y="-12" width="26" height="26" rx="3" fill="none" stroke="#64ffda" stroke-width="2.5"/>
+      <rect x="-3" y="-9" width="6" height="6" rx="1" fill="#64ffda"/>
+      <rect x="-3" y="3" width="6" height="11" fill="#64ffda"/>
+    </g>
+  </g>
+
+  <!-- tag -->
+  <g transform="translate(120 250)">
+    <rect x="0" y="0" width="240" height="44" rx="22" fill="#64ffda" fill-opacity="0.12" stroke="#64ffda" stroke-opacity="0.4"/>
+    <circle cx="28" cy="22" r="5" fill="#64ffda"/>
+    <text x="48" y="29" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#64ffda" letter-spacing="1">HEALTHCARE · WEB</text>
+  </g>
+
+  <text x="120" y="772" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="80" font-weight="800" fill="url(#title)">EyeCare</text>
+  <text x="124" y="822" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="500" fill="#8892b0">Eye-Care Management · Appointments · Prescriptions · Pharmacy</text>
+</svg>

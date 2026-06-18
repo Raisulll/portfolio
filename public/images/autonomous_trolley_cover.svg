@@ -1,0 +1,97 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Autonomous human-following trolley cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a192f"/>
+      <stop offset="1" stop-color="#112240"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientTransform="translate(320 360) rotate(45) scale(560)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#64ffda" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientTransform="translate(1280 520) rotate(45) scale(560)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cone" x1="360" y1="460" x2="1040" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#64ffda" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="title" x1="120" y1="700" x2="760" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glowA)"/>
+  <rect width="1600" height="900" fill="url(#glowB)"/>
+
+  <!-- perspective floor -->
+  <g stroke="#64ffda" stroke-opacity="0.10">
+    <path d="M800 560 L120 900"/>
+    <path d="M800 560 L480 900"/>
+    <path d="M800 560 L800 900"/>
+    <path d="M800 560 L1120 900"/>
+    <path d="M800 560 L1480 900"/>
+    <path d="M120 660 H1480" stroke-opacity="0.07"/>
+    <path d="M40 760 H1560" stroke-opacity="0.06"/>
+    <path d="M-40 870 H1640" stroke-opacity="0.05"/>
+  </g>
+
+  <!-- vision cone camera -> person -->
+  <path d="M430 460 L1010 320 L1010 620 Z" fill="url(#cone)"/>
+
+  <!-- depth dots -->
+  <g fill="#64ffda">
+    <circle cx="560" cy="455" r="4" opacity="0.7"/>
+    <circle cx="650" cy="430" r="4" opacity="0.6"/>
+    <circle cx="650" cy="495" r="4" opacity="0.55"/>
+    <circle cx="760" cy="410" r="4" opacity="0.5"/>
+    <circle cx="760" cy="525" r="4" opacity="0.45"/>
+    <circle cx="880" cy="400" r="4" opacity="0.4"/>
+    <circle cx="880" cy="545" r="4" opacity="0.38"/>
+  </g>
+
+  <!-- ZED stereo camera node + scan arcs -->
+  <g>
+    <path d="M430,300 A180,180 0 0 1 430,620" stroke="#64ffda" stroke-opacity="0.30" stroke-width="2" fill="none"/>
+    <path d="M430,360 A120,120 0 0 1 430,560" stroke="#64ffda" stroke-opacity="0.45" stroke-width="2" fill="none"/>
+    <rect x="300" y="420" width="120" height="80" rx="16" fill="#0e2742" stroke="#64ffda" stroke-opacity="0.6" stroke-width="2"/>
+    <circle cx="338" cy="460" r="17" fill="#0a192f" stroke="#64ffda" stroke-width="3"/>
+    <circle cx="382" cy="460" r="17" fill="#0a192f" stroke="#64ffda" stroke-width="3"/>
+    <circle cx="338" cy="460" r="6" fill="#64ffda"/>
+    <circle cx="382" cy="460" r="6" fill="#64ffda"/>
+  </g>
+
+  <!-- person + tracking box -->
+  <g>
+    <g fill="#ccd6f6">
+      <circle cx="1110" cy="380" r="34"/>
+      <path d="M1066 460 a44 44 0 0 1 88 0 v92 a18 18 0 0 1 -18 18 h-52 a18 18 0 0 1 -18 -18 Z"/>
+      <rect x="1080" y="560" width="22" height="86" rx="10"/>
+      <rect x="1118" y="560" width="22" height="86" rx="10"/>
+    </g>
+    <!-- bounding box -->
+    <rect x="1020" y="320" width="180" height="360" stroke="#64ffda" stroke-width="2.5" stroke-dasharray="10 8" fill="none" rx="6"/>
+    <g stroke="#64ffda" stroke-width="5" stroke-linecap="round">
+      <path d="M1020 348 V320 H1048"/>
+      <path d="M1172 320 H1200 V348"/>
+      <path d="M1200 652 V680 H1172"/>
+      <path d="M1048 680 H1020 V652"/>
+    </g>
+    <g transform="translate(1020 286)">
+      <rect x="0" y="0" width="172" height="26" rx="6" fill="#64ffda"/>
+      <text x="10" y="18" font-family="Consolas, monospace" font-size="15" font-weight="700" fill="#0a192f">PERSON · ReID 0.98</text>
+    </g>
+  </g>
+
+  <!-- category tag -->
+  <g transform="translate(120 250)">
+    <rect x="0" y="0" width="250" height="44" rx="22" fill="#64ffda" fill-opacity="0.12" stroke="#64ffda" stroke-opacity="0.4"/>
+    <circle cx="28" cy="22" r="5" fill="#64ffda"/>
+    <text x="48" y="29" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#64ffda" letter-spacing="1">ROBOTICS · ROS2</text>
+  </g>
+
+  <text x="120" y="770" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="76" font-weight="800" fill="url(#title)">Autonomous Trolley</text>
+  <text x="124" y="820" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="28" font-weight="500" fill="#8892b0">Human-Following Robot · ZED Stereo Vision · YOLO + DeepSORT</text>
+</svg>

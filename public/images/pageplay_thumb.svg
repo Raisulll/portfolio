@@ -1,0 +1,48 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PagePlay digital library thumbnail">
+  <defs>
+    <linearGradient id="tbg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a192f"/>
+      <stop offset="1" stop-color="#112240"/>
+    </linearGradient>
+    <radialGradient id="tglow" cx="0" cy="0" r="1" gradientTransform="translate(600 300) rotate(90) scale(560)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ttitle" x1="380" y1="640" x2="820" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ccd6f6"/><stop offset="1" stop-color="#8aa0c0"/></linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#tbg)"/>
+  <rect width="1200" height="800" fill="url(#tglow)"/>
+
+  <!-- open book -->
+  <g transform="translate(600 330)">
+    <!-- left page -->
+    <path d="M-20 -150 C -120 -180 -250 -170 -300 -150 L -300 150 C -250 130 -120 140 -20 170 Z" fill="url(#page)" opacity="0.95"/>
+    <!-- right page -->
+    <path d="M20 -150 C 120 -180 250 -170 300 -150 L 300 150 C 250 130 120 140 20 170 Z" fill="url(#page)" opacity="0.78"/>
+    <!-- spine -->
+    <path d="M-20 -150 L0 -158 L20 -150 L20 170 L0 178 L-20 170 Z" fill="#0e2742"/>
+    <!-- text lines -->
+    <g stroke="#0a192f" stroke-opacity="0.30" stroke-width="6" stroke-linecap="round">
+      <line x1="-260" y1="-110" x2="-70" y2="-95"/>
+      <line x1="-260" y1="-70" x2="-70" y2="-55"/>
+      <line x1="-260" y1="-30" x2="-70" y2="-15"/>
+      <line x1="-260" y1="10" x2="-110" y2="22"/>
+      <line x1="70" y1="-95" x2="260" y2="-110"/>
+      <line x1="70" y1="-55" x2="260" y2="-70"/>
+      <line x1="70" y1="-15" x2="260" y2="-30"/>
+      <line x1="70" y1="25" x2="200" y2="12"/>
+    </g>
+  </g>
+
+  <!-- AI sparkle -->
+  <path d="M860 200 l13 30 30 13 -30 13 -13 30 -13 -30 -30 -13 30 -13 z" fill="#64ffda"/>
+  <circle cx="930" cy="150" r="8" fill="#64ffda" opacity="0.8"/>
+
+  <text x="600" y="690" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="64" font-weight="800" fill="url(#ttitle)">PagePlay</text>
+  <text x="600" y="730" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="500" fill="#8892b0">Digital Library · AI Reader</text>
+</svg>

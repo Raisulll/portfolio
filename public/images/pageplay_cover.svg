@@ -1,0 +1,93 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PagePlay digital library cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a192f"/>
+      <stop offset="1" stop-color="#112240"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientTransform="translate(360 320) rotate(45) scale(560)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#64ffda" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientTransform="translate(1240 520) rotate(45) scale(560)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="120" y1="700" x2="640" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="spineA" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#64ffda"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glowA)"/>
+  <rect width="1600" height="900" fill="url(#glowB)"/>
+
+  <!-- Reader panel (interactive PDF reader) -->
+  <g>
+    <rect x="150" y="210" width="600" height="470" rx="22" fill="#0e2742" stroke="#64ffda" stroke-opacity="0.35" stroke-width="2"/>
+    <!-- top bar -->
+    <circle cx="190" cy="248" r="7" fill="#64ffda" fill-opacity="0.8"/>
+    <circle cx="214" cy="248" r="7" fill="#3b82f6" fill-opacity="0.7"/>
+    <circle cx="238" cy="248" r="7" fill="#8892b0" fill-opacity="0.5"/>
+    <rect x="560" y="240" width="160" height="16" rx="8" fill="#1e3a5f"/>
+    <line x1="150" y1="282" x2="750" y2="282" stroke="#1e3a5f" stroke-width="2"/>
+    <!-- page heading -->
+    <rect x="200" y="320" width="300" height="22" rx="6" fill="#ccd6f6" fill-opacity="0.85"/>
+    <!-- text lines -->
+    <g fill="#8892b0" fill-opacity="0.6">
+      <rect x="200" y="368" width="500" height="12" rx="6"/>
+      <rect x="200" y="396" width="500" height="12" rx="6"/>
+      <rect x="200" y="424" width="470" height="12" rx="6"/>
+      <rect x="200" y="452" width="500" height="12" rx="6"/>
+      <rect x="200" y="480" width="430" height="12" rx="6"/>
+      <rect x="200" y="508" width="490" height="12" rx="6"/>
+      <rect x="200" y="536" width="360" height="12" rx="6"/>
+    </g>
+    <!-- bookmark ribbon -->
+    <path d="M660 210 h44 v74 l-22 -18 -22 18 Z" fill="#64ffda"/>
+    <!-- reader toolbar -->
+    <rect x="270" y="612" width="360" height="40" rx="20" fill="#0a192f" stroke="#1e3a5f" stroke-width="2"/>
+    <text x="450" y="638" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#8892b0">Page 24 / 312</text>
+    <circle cx="306" cy="632" r="6" fill="#64ffda"/>
+    <circle cx="594" cy="632" r="6" fill="#64ffda"/>
+  </g>
+
+  <!-- AI recommendation card -->
+  <g>
+    <rect x="860" y="250" width="560" height="320" rx="22" fill="#10233f" stroke="#64ffda" stroke-opacity="0.4" stroke-width="2"/>
+    <!-- sparkle -->
+    <path d="M906 300 l9 22 22 9 -22 9 -9 22 -9 -22 -22 -9 22 -9 z" fill="#64ffda"/>
+    <text x="950" y="320" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#ccd6f6">AI Recommendations</text>
+    <!-- suggestion rows -->
+    <g>
+      <rect x="900" y="360" width="60" height="80" rx="8" fill="url(#spineA)" opacity="0.85"/>
+      <rect x="980" y="372" width="380" height="14" rx="7" fill="#8892b0" fill-opacity="0.7"/>
+      <rect x="980" y="400" width="300" height="12" rx="6" fill="#8892b0" fill-opacity="0.45"/>
+      <rect x="980" y="422" width="120" height="12" rx="6" fill="#64ffda" fill-opacity="0.6"/>
+    </g>
+    <g>
+      <rect x="900" y="460" width="60" height="80" rx="8" fill="#3b82f6" opacity="0.8"/>
+      <rect x="980" y="472" width="380" height="14" rx="7" fill="#8892b0" fill-opacity="0.7"/>
+      <rect x="980" y="500" width="280" height="12" rx="6" fill="#8892b0" fill-opacity="0.45"/>
+      <rect x="980" y="522" width="120" height="12" rx="6" fill="#64ffda" fill-opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- floating book stack -->
+  <g transform="translate(1140 600)">
+    <rect x="0" y="40" width="220" height="26" rx="6" fill="#1e3a5f"/>
+    <rect x="14" y="14" width="200" height="26" rx="6" fill="#3b82f6" opacity="0.85"/>
+    <rect x="30" y="-12" width="180" height="26" rx="6" fill="#64ffda" opacity="0.85"/>
+  </g>
+
+  <!-- tag -->
+  <g transform="translate(120 250)">
+    <rect x="0" y="0" width="290" height="44" rx="22" fill="#64ffda" fill-opacity="0.12" stroke="#64ffda" stroke-opacity="0.4"/>
+    <circle cx="28" cy="22" r="5" fill="#64ffda"/>
+    <text x="48" y="29" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#64ffda" letter-spacing="1">DIGITAL LIBRARY · AI</text>
+  </g>
+
+  <text x="120" y="772" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="80" font-weight="800" fill="url(#title)">PagePlay</text>
+  <text x="124" y="822" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="27" font-weight="500" fill="#8892b0">Digital Library · Interactive PDF Reader · AI Recommendations</text>
+</svg>

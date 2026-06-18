@@ -1,0 +1,58 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI-powered surveillance robot thumbnail">
+  <defs>
+    <linearGradient id="tbg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a192f"/>
+      <stop offset="1" stop-color="#112240"/>
+    </linearGradient>
+    <radialGradient id="tglow" cx="0" cy="0" r="1" gradientTransform="translate(600 300) rotate(90) scale(560)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#64ffda" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ttitle" x1="360" y1="640" x2="840" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="tcone" x1="700" y1="330" x2="380" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#64ffda" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#tbg)"/>
+  <rect width="1200" height="800" fill="url(#tglow)"/>
+
+  <!-- vision cone -->
+  <path d="M700 330 L320 230 L320 440 Z" fill="url(#tcone)"/>
+
+  <!-- robot -->
+  <g transform="translate(40 0)">
+    <!-- broadcast waves -->
+    <path d="M760,250 A56,56 0 0 0 760,350" stroke="#3b82f6" stroke-opacity="0.45" stroke-width="2.5" fill="none"/>
+    <path d="M782,228 A86,86 0 0 0 782,372" stroke="#3b82f6" stroke-opacity="0.3" stroke-width="2.5" fill="none"/>
+    <!-- mast + camera -->
+    <line x1="690" y1="450" x2="690" y2="320" stroke="#64ffda" stroke-width="6" stroke-linecap="round"/>
+    <rect x="640" y="282" width="110" height="58" rx="10" fill="#0e2742" stroke="#64ffda" stroke-opacity="0.6" stroke-width="2.5"/>
+    <circle cx="665" cy="311" r="18" fill="#0a192f" stroke="#64ffda" stroke-width="3"/>
+    <circle cx="665" cy="311" r="7" fill="#64ffda"/>
+    <circle cx="722" cy="298" r="5" fill="#ff6b6b"/>
+    <!-- body -->
+    <rect x="610" y="446" width="170" height="80" rx="14" fill="#112a4a" stroke="#64ffda" stroke-opacity="0.5" stroke-width="2.5"/>
+    <rect x="632" y="466" width="60" height="16" rx="8" fill="#64ffda" fill-opacity="0.5"/>
+    <!-- wheels -->
+    <circle cx="640" cy="538" r="26" fill="#0a192f" stroke="#64ffda" stroke-opacity="0.5" stroke-width="3"/>
+    <circle cx="695" cy="538" r="26" fill="#0a192f" stroke="#64ffda" stroke-opacity="0.5" stroke-width="3"/>
+    <circle cx="750" cy="538" r="26" fill="#0a192f" stroke="#64ffda" stroke-opacity="0.5" stroke-width="3"/>
+    <!-- AI sparkle -->
+    <path d="M812 360 l8 19 19 8 -19 8 -8 19 -8 -19 -19 -8 19 -8 z" fill="#64ffda"/>
+  </g>
+
+  <!-- joystick (control hint) -->
+  <g transform="translate(360 330)">
+    <circle cx="0" cy="0" r="56" fill="#0a192f" stroke="#64ffda" stroke-opacity="0.4" stroke-width="2"/>
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#1e3a5f" stroke-width="2"/>
+    <circle cx="16" cy="-12" r="24" fill="#64ffda" fill-opacity="0.18" stroke="#64ffda" stroke-width="2.5"/>
+  </g>
+
+  <text x="600" y="640" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="60" font-weight="800" fill="url(#ttitle)">Surveillance Robot</text>
+  <text x="600" y="682" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="500" fill="#8892b0">ESP32 · Joystick Control · AI</text>
+</svg>

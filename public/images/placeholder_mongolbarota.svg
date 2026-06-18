@@ -1,0 +1,73 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MIST Mongol Barota website preview placeholder">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a0f1f"/>
+      <stop offset="1" stop-color="#1a1222"/>
+    </linearGradient>
+    <radialGradient id="mars" cx="0" cy="0" r="1" gradientTransform="translate(1230 250) rotate(90) scale(220)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff8a5b"/>
+      <stop offset="0.6" stop-color="#e2542f"/>
+      <stop offset="1" stop-color="#7a2414"/>
+    </radialGradient>
+    <radialGradient id="marsGlow" cx="0" cy="0" r="1" gradientTransform="translate(1230 250) rotate(90) scale(420)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff7849" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ff7849" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="520" y1="470" x2="1080" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffb48a"/>
+      <stop offset="1" stop-color="#ff6b3d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#marsGlow)"/>
+
+  <!-- stars -->
+  <g fill="#ffffff">
+    <circle cx="180" cy="140" r="2.5" opacity="0.7"/>
+    <circle cx="420" cy="90" r="1.8" opacity="0.5"/>
+    <circle cx="640" cy="180" r="2.2" opacity="0.6"/>
+    <circle cx="300" cy="300" r="1.6" opacity="0.45"/>
+    <circle cx="900" cy="120" r="2" opacity="0.55"/>
+    <circle cx="1080" cy="80" r="1.6" opacity="0.4"/>
+    <circle cx="120" cy="520" r="2" opacity="0.5"/>
+    <circle cx="1480" cy="600" r="2.2" opacity="0.5"/>
+    <circle cx="1380" cy="760" r="1.6" opacity="0.4"/>
+    <circle cx="520" cy="700" r="1.8" opacity="0.45"/>
+  </g>
+
+  <!-- Mars -->
+  <circle cx="1230" cy="250" r="150" fill="url(#mars)"/>
+  <g fill="#7a2414" opacity="0.35">
+    <ellipse cx="1190" cy="210" rx="34" ry="20"/>
+    <ellipse cx="1280" cy="280" rx="26" ry="16"/>
+    <circle cx="1240" cy="200" r="12"/>
+  </g>
+
+  <!-- orbit ring -->
+  <ellipse cx="1230" cy="250" rx="220" ry="70" stroke="#ff7849" stroke-opacity="0.3" stroke-width="2" fill="none"/>
+
+  <!-- ground line -->
+  <path d="M0 720 Q 400 690 800 715 T 1600 705 V900 H0 Z" fill="#ffffff" fill-opacity="0.03"/>
+
+  <!-- simple rover -->
+  <g transform="translate(250 600)" stroke="#ffb48a" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="20" y="40" width="150" height="46" rx="8" fill="#ff7849" fill-opacity="0.12"/>
+    <path d="M40 40 V18 H120"/>
+    <circle cx="120" cy="14" r="9" fill="#ffb48a"/>
+    <path d="M20 86 H170"/>
+    <circle cx="48" cy="104" r="18" fill="#0a0f1f"/>
+    <circle cx="100" cy="104" r="18" fill="#0a0f1f"/>
+    <circle cx="152" cy="104" r="18" fill="#0a0f1f"/>
+  </g>
+
+  <!-- placeholder pill -->
+  <g transform="translate(700 360)">
+    <rect x="0" y="0" width="200" height="44" rx="22" fill="#ff7849" fill-opacity="0.14" stroke="#ff7849" stroke-opacity="0.45"/>
+    <circle cx="28" cy="22" r="5" fill="#ff8a5b"/>
+    <text x="48" y="29" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#ffb48a" letter-spacing="1">PREVIEW IMAGE</text>
+  </g>
+
+  <text x="800" y="500" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="78" font-weight="800" fill="url(#title)" letter-spacing="1">MIST Mongol Barota</text>
+  <text x="800" y="556" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="500" fill="#9aa4b8">Mars Rover Team — Official Website</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VirtualShop preview placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a192f"/>
+      <stop offset="1" stop-color="#112240"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientTransform="translate(420 300) rotate(45) scale(520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#64ffda" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientTransform="translate(1200 620) rotate(45) scale(540)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="text" x1="560" y1="430" x2="1040" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glowA)"/>
+  <rect width="1600" height="900" fill="url(#glowB)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04">
+    <path d="M0 150H1600M0 300H1600M0 450H1600M0 600H1600M0 750H1600"/>
+    <path d="M200 0V900M400 0V900M600 0V900M800 0V900M1000 0V900M1200 0V900M1400 0V900"/>
+  </g>
+
+  <!-- placeholder pill -->
+  <g transform="translate(700 250)">
+    <rect x="0" y="0" width="200" height="44" rx="22" fill="#64ffda" fill-opacity="0.12" stroke="#64ffda" stroke-opacity="0.4"/>
+    <circle cx="28" cy="22" r="5" fill="#64ffda"/>
+    <text x="48" y="29" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#64ffda" letter-spacing="1">PREVIEW IMAGE</text>
+  </g>
+
+  <!-- shopping bag glyph -->
+  <g transform="translate(760 350)" stroke="url(#text)" stroke-width="7" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M14 30 H66 L74 96 H6 Z"/>
+    <path d="M28 30 V20 a12 12 0 0 1 24 0 V30"/>
+  </g>
+  <circle cx="846" cy="372" r="9" fill="#64ffda"/>
+  <path d="M858 352 l6 16 16 6 -16 6 -6 16 -6 -16 -16 -6 16 -6 z" fill="#64ffda" fill-opacity="0.9"/>
+
+  <text x="800" y="560" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="92" font-weight="800" fill="url(#text)" letter-spacing="1">VirtualShop</text>
+  <text x="800" y="620" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="32" font-weight="500" fill="#8892b0">AI Shopping &amp; Virtual Try-On</text>
+</svg>
