@@ -819,10 +819,10 @@ export const education = [
       "One of Bangladesh's leading engineering universities under military administration, based in Dhaka. Known for its rigorous curriculum and strong emphasis on research and development in science and technology.",
   },
 ];
-export const highlightStats = [
-  { label: 'University Rover Challenge 2026', value: '11th Place' },
-  { label: 'Anatolian Rover Challenge 2024', value: '1st Runners-Up' },
-];
+// export const highlightStats = [
+//   { label: 'University Rover Challenge 2026', value: '11th Place' },
+//   { label: 'Anatolian Rover Challenge 2024', value: '1st Runners-Up' },
+// ];
 
 /**
  * Press, media & recognition coverage shown on the /featured page and its
