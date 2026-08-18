@@ -11,7 +11,6 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen">
         <Hero />
-        {/* <Highlights /> */}
         <FeaturedProject />
         <Skills />
       </main>
