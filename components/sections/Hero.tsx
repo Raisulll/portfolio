@@ -1,7 +1,14 @@
 'use client'
 
+import { Magnetic, Tilt } from '@/components/motion'
 import { siteConfig, socialLinks } from '@/lib/data'
-import { motion } from 'framer-motion'
+import {
+  motion,
+  useMotionValue,
+  useReducedMotion,
+  useSpring,
+  useTransform,
+} from 'framer-motion'
 import { ArrowRight, Download, Mail } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -46,6 +53,26 @@ export function Hero() {
   const [currentRole, setCurrentRole] = useState(0)
   const [displayText, setDisplayText] = useState('')
   const [isTyping, setIsTyping] = useState(true)
+  const prefersReducedMotion = useReducedMotion()
+
+  // Pointer-reactive aurora — the background blobs drift toward the cursor at
+  // different depths for a subtle parallax. Springs keep the motion buttery.
+  const pointerX = useMotionValue(0)
+  const pointerY = useMotionValue(0)
+  const smoothX = useSpring(pointerX, { stiffness: 60, damping: 20 })
+  const smoothY = useSpring(pointerY, { stiffness: 60, damping: 20 })
+  const blob1X = useTransform(smoothX, [-0.5, 0.5], [-36, 36])
+  const blob1Y = useTransform(smoothY, [-0.5, 0.5], [-28, 28])
+  const blob2X = useTransform(smoothX, [-0.5, 0.5], [28, -28])
+  const blob2Y = useTransform(smoothY, [-0.5, 0.5], [22, -22])
+  const blob3X = useTransform(smoothX, [-0.5, 0.5], [18, -18])
+  const blob3Y = useTransform(smoothY, [-0.5, 0.5], [-14, 14])
+
+  function handlePointerMove(e: React.MouseEvent<HTMLElement>) {
+    if (prefersReducedMotion) return
+    pointerX.set(e.clientX / window.innerWidth - 0.5)
+    pointerY.set(e.clientY / window.innerHeight - 0.5)
+  }
 
   useEffect(() => {
     const role = roles[currentRole]
@@ -97,15 +124,23 @@ export function Hero() {
   return (
     <section
       id="home"
+      onMouseMove={handlePointerMove}
       className="relative overflow-hidden bg-background flex items-center pt-28 pb-16 sm:pt-32 sm:pb-24 min-h-[100svh] lg:min-h-[92vh]"
     >
       {/* Background layers */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-60" />
-        {/* Aurora blobs */}
-        <div className="absolute -top-32 -left-24 h-[28rem] w-[28rem] rounded-full bg-accent/15 blur-[120px] animate-float-slow" />
-        <div className="absolute -top-10 right-0 h-[26rem] w-[26rem] rounded-full bg-primary/15 blur-[120px] animate-aurora" />
-        <div className="absolute bottom-0 left-1/3 h-[22rem] w-[22rem] rounded-full bg-chart-3/10 blur-[120px] animate-glow-pulse" />
+        {/* Aurora blobs — CSS ambient drift on the inner layer, cursor parallax
+            on the outer layer, so the two transforms compose instead of fighting. */}
+        <motion.div style={{ x: blob1X, y: blob1Y }} className="absolute -top-32 -left-24">
+          <div className="h-[28rem] w-[28rem] rounded-full bg-accent/15 blur-[120px] animate-float-slow" />
+        </motion.div>
+        <motion.div style={{ x: blob2X, y: blob2Y }} className="absolute -top-10 right-0">
+          <div className="h-[26rem] w-[26rem] rounded-full bg-primary/15 blur-[120px] animate-aurora" />
+        </motion.div>
+        <motion.div style={{ x: blob3X, y: blob3Y }} className="absolute bottom-0 left-1/3">
+          <div className="h-[22rem] w-[22rem] rounded-full bg-chart-3/10 blur-[120px] animate-glow-pulse" />
+        </motion.div>
       </div>
 
       <div className="max-w-6xl mx-auto px-6 w-full">
@@ -120,17 +155,19 @@ export function Hero() {
             {/* Rotating glow ring */}
             <div className="absolute inset-0 -z-10 animate-spin-slow rounded-[2.5rem] bg-[conic-gradient(from_0deg,var(--accent),transparent_40%,var(--primary),transparent_75%,var(--accent))] opacity-30 blur-2xl" />
 
-            <div className="animate-float relative aspect-square overflow-hidden rounded-[1.75rem] lg:rounded-[2rem] border border-border/60 bg-background shadow-[0_24px_100px_-50px_rgba(0,0,0,0.5)]">
-              <Image
-                src="/images/profile_headshot.png"
-                alt={siteConfig.name}
-                fill
-                sizes="(max-width: 640px) 11rem, (max-width: 1024px) 15rem, 28rem"
-                className="object-cover object-center"
-                priority
-              />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(100,255,218,0.14),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.04),transparent_45%)]" />
-            </div>
+            <Tilt strength={8}>
+              <div className="animate-float relative aspect-square overflow-hidden rounded-[1.75rem] lg:rounded-[2rem] border border-border/60 bg-background shadow-elevated">
+                <Image
+                  src="/images/profile_headshot.png"
+                  alt={siteConfig.name}
+                  fill
+                  sizes="(max-width: 640px) 11rem, (max-width: 1024px) 15rem, 28rem"
+                  className="object-cover object-center"
+                  priority
+                />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(100,255,218,0.14),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.04),transparent_45%)]" />
+              </div>
+            </Tilt>
           </motion.div>
 
           {/* Text content */}
@@ -175,13 +212,15 @@ export function Hero() {
 
             {/* CTA Buttons */}
             <motion.div className="flex flex-col sm:flex-row gap-4 pt-2 justify-center lg:justify-start" variants={item}>
-              <Link
-                href="/projects"
-                className="group inline-flex items-center justify-center px-6 py-3 bg-accent text-accent-foreground font-medium rounded-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30"
-              >
-                View My Work
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              <Magnetic className="w-full sm:w-auto" strength={0.3}>
+                <Link
+                  href="/projects"
+                  className="btn-shine group inline-flex w-full items-center justify-center rounded-lg bg-accent px-6 py-3 font-medium text-accent-foreground shadow-lg shadow-accent/20 transition-all duration-200 hover:shadow-xl hover:shadow-accent/40 sm:w-auto"
+                >
+                  View My Work
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Magnetic>
               <a
                 href="https://drive.google.com/uc?export=download&id=10Ew7riHhJ0l4VA81fsVY_sUdJAGGg5uD"
                 download

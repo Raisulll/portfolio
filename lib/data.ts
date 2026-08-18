@@ -7,10 +7,10 @@ export const siteConfig = {
 
 export const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
+  { href: '/biography', label: 'Biography' },
   { href: '/projects', label: 'Projects' },
-  { href: '/experience', label: 'Experience' },
   { href: '/achievements', label: 'Achievements' },
+  { href: '/featured', label: 'Feature' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -581,72 +581,171 @@ export const projects: Project[] = [
       },
     ],
   },
+  {
+    id: 8,
+    slug: 'iinwentory',
+    title: 'iinwentory — Inventory Management SaaS',
+    category: 'Web',
+    image: '/images/placeholder_iinwentory.svg',
+    thumbnail: '/images/placeholder_iinwentory.svg',
+    shortDesc:
+      'A Sortly-style inventory management SaaS with QR-coded items, hierarchical stock tracking, and Stripe subscription billing — built as a web app, API server, and marketing site in one monorepo.',
+    description:
+      'iinwentory is a full inventory management platform where teams organize stock into nested locations, tag items with QR codes, and track quantities in real time. It ships as a monorepo — a React web app, an Express API server, and a marketing site — with JWT authentication, image uploads, transactional emails, and Stripe-powered subscription billing.',
+    problem:
+      'Small businesses and teams outgrow spreadsheets fast: stock lives across shelves, rooms, and warehouses with no single source of truth, no quick way to look an item up, and no clean path from a free trial to a paid plan.',
+    solution:
+      'I built iinwentory as a Sortly-style SaaS where every item and location is a node in a hierarchy you can nest as deep as you need, each item gets a scannable QR label for instant lookup, and photos, quantities, and details stay in sync. A monorepo cleanly separates the React web app, the Express + Prisma API, and the marketing site, while JWT auth secures accounts, transactional emails handle verification and resets, and Stripe manages subscriptions and billing.',
+    techStack: [
+      'React 19',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'Radix UI',
+      'Express 5',
+      'Prisma',
+      'PostgreSQL',
+      'Supabase',
+      'Stripe',
+    ],
+    features: [
+      'Hierarchical stock tracking with items nested inside locations and folders',
+      'QR-coded items for instant scanning and lookup',
+      'Image uploads for items and locations',
+      'JWT-based authentication with secure sessions',
+      'Stripe-powered subscription billing and plan management',
+      'Transactional emails for verification, password resets, and notifications',
+      'Monorepo spanning the web app, API server, and marketing site',
+      'Responsive UI built with Tailwind CSS and Radix UI primitives',
+    ],
+    github: null,
+    liveDemo: 'https://iinwentory.com/',
+    year: 2025,
+    details: [
+      {
+        title: 'Monorepo architecture',
+        description:
+          'The platform is organized as a single monorepo with three deployable pieces — a React + Vite web app, an Express 5 API server, and a standalone marketing site — sharing types and tooling so features move across the stack without drift.',
+      },
+      {
+        title: 'Hierarchical, QR-coded inventory',
+        description:
+          'Items and locations form a tree you can nest to any depth, mirroring how stock actually lives across rooms, shelves, and bins. Every item carries a QR code, so a scan jumps straight to its record for fast audits and lookups.',
+      },
+      {
+        title: 'Auth, uploads & email',
+        description:
+          'JWT authentication secures accounts and API access, image uploads attach photos to items and locations, and transactional emails handle account verification, password resets, and notifications.',
+      },
+      {
+        title: 'Stripe subscription billing',
+        description:
+          'Stripe powers the SaaS side — subscription plans, checkout, and recurring billing — turning the app into a real product with a path from sign-up to paid subscriber.',
+      },
+      {
+        title: 'Prisma + PostgreSQL data layer',
+        description:
+          'A PostgreSQL database (via Supabase) is accessed through Prisma, giving the API a type-safe schema and migrations for items, locations, users, and subscriptions.',
+      },
+    ],
+  },
 ];
+
+/**
+ * Projects highlighted on the home page, in display order.
+ * The first slug renders as the large lead feature; the rest fill the grid
+ * below it. Reorder or swap slugs here to change what the home page showcases
+ * — no component changes needed.
+ */
+export const featuredSlugs = [
+  'pageplay',
+  'iinwentory',
+  'virtualshop',
+  'autonomous-trolley',
+]
+
+export const featuredProjects: Project[] = featuredSlugs
+  .map((slug) => projects.find((p) => p.slug === slug))
+  .filter((p): p is Project => Boolean(p))
 
 export const experience = [
   {
     id: 1,
-    organization: 'MIST Mongol Barota',
-    role: 'Team Lead',
-    period: 'June 2025 - Present',
+    organization: 'Imperial Trends',
+    role: 'Software Developer',
+    location: 'Leicester, United Kingdom — Remote',
+    period: 'June 2026 - Present',
     description:
-      'Leading the overall team direction and strategy for University Rover Challenge 2026. Managing software, mechanical, and business divisions.',
+      'Building and maintaining production web applications for a UK-based company as part of a remote, cross-functional team.',
     highlights: [
-      'Overseeing development of autonomous rover for URC 2026',
-      'Mentoring 50+ team members',
-      'Managing technical roadmap and milestones',
-      'Coordinating with stakeholders',
+      'Built and maintained web apps with React.js, Node.js, and PostgreSQL, exposing RESTful APIs with secure authentication',
+      'Collaborated across functions to design and ship scalable solutions that improved performance and user experience',
+      'Ran code reviews, set up CI/CD pipelines, and optimized database queries for reliability and efficiency',
     ],
   },
   {
     id: 2,
-    organization: 'MIST Mongol Barota',
-    role: 'Software & Communication Co-Lead',
-    period: 'March 2024 - May 2025',
+    organization: 'MIST Mars Rover Society',
+    role: 'Team Lead',
+    location: 'Dhaka, Bangladesh',
+    period: 'June 2025 - June 2026',
     description:
-      'Led software development team and managed technical communications for the rover project.',
+      'Led the full team — mechanical, electrical, and software divisions — to build and field a Mars rover for international competition.',
     highlights: [
-      'Developed autonomous navigation system (SLAM)',
-      'Implemented real-time communication protocol',
-      'Achieved 14th place in URC 2025',
-      'Mentored 30+ software engineers',
+      'Led 50+ members across mechanical, electrical, and software teams to build and deploy a competition Mars rover',
+      'Took a 12-member crew to URC 2026, securing 11th place among 38 finalists worldwide',
+      'Owned project timelines, technical reviews, and international competition logistics',
     ],
   },
   {
     id: 3,
-    organization: 'MIST Mongol Barota',
-    role: 'Software Team Member',
-    period: 'October 2022 - March 2024',
-    description: 'Contributed to software systems for autonomous rover development.',
+    organization: 'MIST Mars Rover Society',
+    role: 'Software & Communication Co-Lead / Mentor',
+    location: 'Dhaka, Bangladesh',
+    period: 'March 2024 - May 2025',
+    description:
+      'Led rover software and communication systems and mentored junior members of the software team.',
     highlights: [
-      'Implemented OpenCV-based vision system',
-      'Developed motor control firmware',
-      'Contributed to SLAM algorithm optimization',
+      'Built rover software in ROS and C++ for autonomous navigation, robotic-arm control, and real-time communication',
+      "Designed the rover's networking infrastructure and mentored juniors in ROS and embedded systems",
     ],
   },
   {
     id: 4,
-    organization: 'MIST Computer Club',
-    role: 'Executive Director',
-    period: 'June 2025 - Present',
-    description: 'Leading the computer club with focus on competitive programming and web development.',
+    organization: 'MIST Mars Rover Society',
+    role: 'Software & Communication Team Member',
+    location: 'Dhaka, Bangladesh',
+    period: 'October 2022 - March 2024',
+    description: "Contributed to the rover's software and communication stack.",
     highlights: [
-      'Organizing programming contests',
-      'Managing 500+ club members',
-      'Conducting workshops and seminars',
-      'Coordinating inter-university competitions',
+      'Contributed to rover networking, real-time communication, and autonomous-navigation testing',
     ],
   },
   {
     id: 5,
     organization: 'MIST Computer Club',
-    role: 'VP Programming & Mentor',
-    period: 'April 2023 - June 2025',
-    description: 'Mentored members in competitive programming and provided technical guidance.',
+    role: 'Executive Director',
+    location: 'Dhaka, Bangladesh',
+    period: 'June 2025 - June 2026',
+    description:
+      'Directed club operations across competitive programming, hackathons, and inter-university contests.',
     highlights: [
-      'Conducted 50+ training sessions',
-      'Mentored 100+ competitive programmers',
-      'Organized ICPC practice contests',
+      'Oversaw all club operations — competitive programming workshops, hackathons, and inter-university contests',
+      'Ran MIST Talent Hunt 2025: coordinated programming and CTF contests, volunteer teams, and technical infrastructure',
+    ],
+  },
+  {
+    id: 6,
+    organization: 'MIST Computer Club',
+    role: 'Vice President / Programming Mentor',
+    location: 'Dhaka, Bangladesh',
+    period: 'April 2023 - June 2025',
+    description:
+      'Mentored members in competitive programming and helped run the club’s programming and security events.',
+    highlights: [
+      'Mentored students in competitive programming — data structures, graph algorithms, and dynamic programming',
+      'Co-organized intra-university programming contests and set contest problems',
+      'Supported MIST LeetCon 2023 (international cybersecurity conference) and Cyber Drill 2023',
     ],
   },
 ];
@@ -724,3 +823,220 @@ export const highlightStats = [
   { label: 'University Rover Challenge 2026', value: '11th Place' },
   { label: 'Anatolian Rover Challenge 2024', value: '1st Runners-Up' },
 ];
+
+/**
+ * Press, media & recognition coverage shown on the /featured page and its
+ * per-item detail routes (/featured/[slug]).
+ *
+ * `titleGloss` holds an English translation when the original headline is in
+ * Bangla. `summary` is the card + hero lead; `body` holds any extra paragraphs
+ * shown only on the detail page. `sources` lists the original articles /
+ * broadcasts (may be empty when a piece has no public permalink). Images are
+ * self-hosted in /public/images. Ordered newest first — rendered in array order.
+ */
+export type PressSource = {
+  label: string
+  url: string
+  kind: 'article' | 'video' | 'social'
+}
+
+export type PressItem = {
+  id: number
+  slug: string
+  title: string
+  titleGloss?: string
+  outlet: string
+  category: 'News' | 'Media' | 'Recognition' | 'Interview' | 'Milestone'
+  date: string
+  image: string
+  summary: string
+  body?: string[]
+  sources: PressSource[]
+}
+
+const PRESS_MONTHS = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+]
+
+/** Deterministic date format — avoids SSR/client locale hydration mismatches. */
+export function formatPressDate(iso: string) {
+  const [year, month, day] = iso.split('-')
+  return `${PRESS_MONTHS[Number(month) - 1]} ${Number(day)}, ${year}`
+}
+
+export const pressItems: PressItem[] = [
+  {
+    id: 1,
+    slug: 'urc-2026-11th-global',
+    title: "MIST's Team Mongol Barota ranks 11th globally at URC 2026",
+    outlet: 'The Business Standard',
+    category: 'Milestone',
+    date: '2026-06-02',
+    image: '/images/press-urc2026-11th.jpeg',
+    summary:
+      "Team Mongol Barota from MIST finished 11th out of 35 university teams worldwide at the University Rover Challenge (URC) 2026 in Utah — the team's best-ever placement, improving on their 14th-place finish the year before.",
+    body: [
+      'The University Rover Challenge, staged annually at the Mars Desert Research Station in Utah, brought together 35 teams from renowned universities across the globe for its 2026 edition.',
+      "Representing Bangladesh, MIST's Team Mongol Barota placed 11th overall — a clear step up from their 14th-place finish at URC 2025 and a milestone for the country's presence in international Mars-rover robotics.",
+    ],
+    sources: [
+      {
+        label: 'The Business Standard',
+        url: 'https://www.tbsnews.net/bangladesh/mists-team-mongol-barota-ranks-11th-globally-university-rover-challenge-2026-1452506',
+        kind: 'article',
+      },
+      {
+        label: 'MISTians Diary',
+        url: 'https://www.facebook.com/MISTiansdiary.bd/posts/954055304124518/',
+        kind: 'social',
+      },
+    ],
+  },
+  {
+    id: 2,
+    slug: 'urc-2025-14th-global',
+    title: 'MIST Mongol Barota ranked 14th at URC 2025',
+    outlet: 'MIST Mongol Barota',
+    category: 'Milestone',
+    date: '2025-06-12',
+    image: '/images/press-mongolbarota-urc14.png',
+    summary:
+      "A team retrospective on placing 14th at the University Rover Challenge (URC) 2025 in Utah — tracing Mongol Barota's journey from Bangladesh's first Mars rover team in 2013, through a decade-long hiatus, to their return to the international stage.",
+    body: [
+      "Mongol Barota began in 2013 as Bangladesh's first Mars-rover team. After a near decade-long hiatus, the team returned to the international stage and qualified once more for the University Rover Challenge finals.",
+      'At URC 2025, held at the Mars Desert Research Station in Utah, the team placed 14th — re-establishing Bangladesh among the world’s top student rover programmes and setting up their 11th-place finish a year later.',
+    ],
+    sources: [],
+  },
+  {
+    id: 3,
+    slug: 'arc-2024-runners-up-daily-star',
+    title: 'Mongol Barota secures runners-up trophy at Anatolian Rover Challenge 2024',
+    outlet: 'The Daily Star',
+    category: 'News',
+    date: '2024-12-10',
+    image: '/images/press-dailystar-arc2024.png',
+    summary:
+      'The Daily Star reports MIST Mongol Barota securing the runners-up trophy at the Anatolian Rover Challenge (ARC) 2024 in Türkiye, along with the champion title in the ARC Junior 2024 Exploration Challenge.',
+    body: [
+      'At the Anatolian Rover Challenge (ARC) 2024 in Türkiye, MIST Mongol Barota secured the runners-up trophy in the main challenge.',
+      "The team also claimed the champion title in the ARC Junior 2024 Exploration Challenge — a standout result at one of the world's major university rover competitions.",
+    ],
+    sources: [
+      {
+        label: 'The Daily Star',
+        url: 'https://www.thedailystar.net/campus/campus/news/mists-mongol-barota-secures-runners-trophy-anatolian-rover-challenge-2024-3689621',
+        kind: 'article',
+      },
+    ],
+  },
+  {
+    id: 4,
+    slug: 'arc-2024-byte-media',
+    title: 'MIST Mongol Barota — 1st Runner-up at ARC 2024, Türkiye',
+    outlet: 'Byte Media',
+    category: 'Media',
+    date: '2024-10-22',
+    image: '/images/press-byte-media-arc2024.jpg',
+    summary:
+      "Byte Media's feature celebrating MIST Mongol Barota's 1st runner-up finish at the Anatolian Rover Challenge (ARC) 2024 in Türkiye.",
+    body: [
+      "Byte Media produced a feature celebrating MIST Mongol Barota's 1st runner-up finish at the Anatolian Rover Challenge (ARC) 2024 in Türkiye.",
+    ],
+    sources: [],
+  },
+  {
+    id: 5,
+    slug: 'arc-2024-news24',
+    title: "আন্তর্জাতিক রোবটিক্স প্রতিযোগিতার রানারআপ এম.আই.এস.টি'র মঙ্গল বারতা",
+    titleGloss: "MIST's Mongol Barota — runners-up at an international robotics competition",
+    outlet: 'NEWS 24',
+    category: 'News',
+    date: '2024-09-08',
+    image: '/images/press-news24-arc2024.png',
+    summary:
+      'A NEWS 24 television segment covering MIST Mongol Barota as runners-up at the Anatolian Rover Challenge 2024.',
+    body: [
+      'NEWS 24 aired a television segment on MIST Mongol Barota as runners-up at the Anatolian Rover Challenge 2024 in Türkiye.',
+    ],
+    sources: [
+      {
+        label: 'NEWS 24',
+        url: 'https://www.facebook.com/share/v/1B6pgf63f5/',
+        kind: 'video',
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: 'arc-2024-ittefaq-reception',
+    title: 'এমআইএসটির ‘মঙ্গল বারতা’র রানারআপ দলকে সংবর্ধনা',
+    titleGloss: 'MIST honours its runner-up team, Mongol Barota',
+    outlet: 'Daily Ittefaq',
+    category: 'News',
+    date: '2024-09-08',
+    image: '/images/press-ittefaq-arc2024.png',
+    summary:
+      'Daily Ittefaq covers the reception MIST held to celebrate Mongol Barota after their runner-up finish at the Anatolian Rover Challenge 2024 in Türkiye.',
+    body: [
+      'Daily Ittefaq reported on the reception MIST held to honour Mongol Barota after the team returned as runners-up from the Anatolian Rover Challenge 2024 in Türkiye.',
+    ],
+    sources: [
+      {
+        label: 'Daily Ittefaq',
+        url: 'https://www.ittefaq.com.bd/699473/এমআইএসটির-মঙ্গল-বারতা-র-রানারআপ-দলকে-সংবর্ধনা',
+        kind: 'article',
+      },
+    ],
+  },
+  {
+    id: 7,
+    slug: 'urc-2024-prothom-alo',
+    title: 'সর্বোচ্চ নম্বর পাওয়া দলটির ফাইনালে যাওয়া হবে তো?',
+    titleGloss: 'Will the top-scoring team make it to the finals?',
+    outlet: 'Prothom Alo',
+    category: 'News',
+    date: '2024-05-12',
+    image: '/images/press-prothomalo-urc.png',
+    summary:
+      'Prothom Alo profiles MIST Mongol Barota after topping the University Rover Challenge preliminary round, spotlighting the funding hurdles between the team and the finals in Utah.',
+    body: [
+      'After MIST Mongol Barota topped the University Rover Challenge preliminary round, Prothom Alo profiled the team and the funding hurdles standing between them and the finals in Utah.',
+    ],
+    sources: [
+      {
+        label: 'Prothom Alo',
+        url: 'https://www.prothomalo.com/lifestyle/4s0cag9hvz',
+        kind: 'article',
+      },
+    ],
+  },
+  {
+    id: 8,
+    slug: 'urc-2024-finals-daily-star',
+    title: "Mongol Barota: MIST's Mars rover team in the URC 2024 finals",
+    outlet: 'The Daily Star (Campus)',
+    category: 'News',
+    date: '2024-04-18',
+    image: '/images/press-dailystar-urc-finals.png',
+    summary:
+      "The Daily Star's Campus desk covers MIST Mongol Barota heading to the University Rover Challenge finals in Utah with their rover PHOENIX 4.0, aiming to represent Bangladesh among the world's top teams.",
+    body: [
+      "Ahead of the University Rover Challenge (URC) 2024 finals at the Mars Desert Research Station in Utah, The Daily Star's Campus desk profiled MIST's Mongol Barota and their rover, PHOENIX 4.0.",
+      'The feature followed the team as they prepared to represent Bangladesh on the international stage.',
+    ],
+    sources: [
+      {
+        label: 'The Daily Star',
+        url: 'https://www.thedailystar.net/campus/campus/news/mongol-barota-mists-mars-rover-team-participating-the-university-rover-challenge-finals-3589756',
+        kind: 'article',
+      },
+      {
+        label: 'The Daily MIST',
+        url: 'https://www.facebook.com/TheDailyMISTbd/photos/mongol-barota-team-heads-to-usa-to-represent-bangladesh-at-university-rover-chal/622236494196359/',
+        kind: 'social',
+      },
+    ],
+  },
+]

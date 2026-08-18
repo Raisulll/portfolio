@@ -102,7 +102,7 @@ export function Contact() {
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_1.35fr]">
           <ScrollReveal direction="left">
-            <div className="relative h-full rounded-3xl border border-border/80 bg-card/80 p-8 shadow-[0_24px_90px_-50px_rgba(0,0,0,0.45)] backdrop-blur-sm">
+            <div className="spotlight relative h-full rounded-3xl border border-border/80 bg-card/80 p-8 shadow-[0_24px_90px_-50px_rgba(0,0,0,0.45)] backdrop-blur-sm">
               <div className="absolute right-0 top-0 h-44 w-44 translate-x-1/3 -translate-y-1/3 rounded-full bg-accent/10 blur-3xl" />
 
               <div className="relative space-y-8">
@@ -179,7 +179,7 @@ export function Contact() {
           </ScrollReveal>
 
           <ScrollReveal direction="right" delay={0.08}>
-            <div className="relative rounded-3xl border border-border/80 bg-card/80 p-8 shadow-[0_24px_90px_-50px_rgba(0,0,0,0.45)] backdrop-blur-sm lg:p-10">
+            <div className="spotlight relative rounded-3xl border border-border/80 bg-card/80 p-8 shadow-[0_24px_90px_-50px_rgba(0,0,0,0.45)] backdrop-blur-sm lg:p-10">
               <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
 
               <div className="mb-8 flex items-end justify-between gap-4">
@@ -253,7 +253,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={submitStatus === 'loading'}
-                    className={`group inline-flex items-center justify-center rounded-full px-6 py-3.5 font-medium transition-all duration-200 ${
+                    className={`btn-shine group inline-flex items-center justify-center rounded-full px-6 py-3.5 font-medium transition-all duration-200 ${
                       submitStatus === 'success'
                         ? 'border border-green-500/50 bg-green-500/15 text-green-500'
                         : submitStatus === 'error'

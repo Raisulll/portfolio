@@ -1,7 +1,7 @@
 'use client'
 
 import { navLinks } from '@/lib/data'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -14,6 +14,14 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+
+  // Reading-progress bar pinned to the navbar's bottom edge.
+  const { scrollYProgress } = useScroll()
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 140,
+    damping: 30,
+    restDelta: 0.001,
+  })
 
   useEffect(() => {
     const handleScroll = () => {
@@ -133,6 +141,15 @@ export function Navbar() {
           </button>
         </div>
       </div>
+
+      {/* Scroll progress bar */}
+      <motion.div
+        style={{ scaleX: progress }}
+        className={`absolute bottom-0 left-0 right-0 h-0.5 origin-left bg-gradient-to-r from-accent via-primary to-accent transition-opacity duration-300 ${
+          isScrolled ? 'opacity-100' : 'opacity-0'
+        }`}
+        aria-hidden="true"
+      />
 
       {/* Mobile Navigation */}
       <AnimatePresence>

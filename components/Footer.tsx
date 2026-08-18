@@ -62,8 +62,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/experience" className="link-underline hover:text-accent transition-colors">
-                  Experience
+                <a href="/biography" className="link-underline hover:text-accent transition-colors">
+                  Biography
+                </a>
+              </li>
+              <li>
+                <a href="/featured" className="link-underline hover:text-accent transition-colors">
+                  Feature
                 </a>
               </li>
               <li>

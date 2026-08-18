@@ -70,7 +70,7 @@ export function Projects() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.94 }}
                 transition={{ duration: 0.4, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
-                className="group h-full rounded-xl border border-border overflow-hidden glass card-hover hover:border-accent flex flex-col"
+                className="spotlight group h-full rounded-xl border border-border overflow-hidden glass card-hover hover:border-accent flex flex-col"
               >
                 <Link href={`/projects/${project.slug}`} className="flex flex-1 flex-col">
                   {/* Project Image */}

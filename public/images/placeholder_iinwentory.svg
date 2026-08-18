@@ -1,0 +1,56 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="iinwentory preview placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a192f"/>
+      <stop offset="1" stop-color="#112240"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientTransform="translate(420 300) rotate(45) scale(520)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#64ffda" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientTransform="translate(1200 620) rotate(45) scale(540)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="text" x1="560" y1="430" x2="1040" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64ffda"/>
+      <stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glowA)"/>
+  <rect width="1600" height="900" fill="url(#glowB)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04">
+    <path d="M0 150H1600M0 300H1600M0 450H1600M0 600H1600M0 750H1600"/>
+    <path d="M200 0V900M400 0V900M600 0V900M800 0V900M1000 0V900M1200 0V900M1400 0V900"/>
+  </g>
+
+  <!-- placeholder pill -->
+  <g transform="translate(700 210)">
+    <rect x="0" y="0" width="200" height="44" rx="22" fill="#64ffda" fill-opacity="0.12" stroke="#64ffda" stroke-opacity="0.4"/>
+    <circle cx="28" cy="22" r="5" fill="#64ffda"/>
+    <text x="48" y="29" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#64ffda" letter-spacing="1">PREVIEW IMAGE</text>
+  </g>
+
+  <!-- package / box glyph (lucide "package") -->
+  <g transform="translate(752 300) scale(4.2)" stroke="url(#text)" stroke-width="1.7" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="m7.5 4.27 9 5.15"/>
+    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+    <path d="M3.3 7 12 12l8.7-5"/>
+    <path d="M12 22V12"/>
+  </g>
+
+  <!-- QR-code accent -->
+  <g transform="translate(902 322)" fill="#64ffda" fill-opacity="0.9">
+    <rect x="0" y="0" width="10" height="10"/>
+    <rect x="16" y="0" width="10" height="10"/>
+    <rect x="0" y="16" width="10" height="10"/>
+    <rect x="16" y="16" width="10" height="10" fill-opacity="0.5"/>
+  </g>
+
+  <text x="800" y="600" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="92" font-weight="800" fill="url(#text)" letter-spacing="1">iinwentory</text>
+  <text x="800" y="660" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="32" font-weight="500" fill="#8892b0">Inventory Management SaaS</text>
+</svg>

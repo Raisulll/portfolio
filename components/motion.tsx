@@ -4,6 +4,7 @@ import {
   motion,
   useInView,
   useMotionValue,
+  useReducedMotion,
   useSpring,
   useTransform,
   type Variants,
@@ -110,6 +111,53 @@ export function Tilt({ children, className, strength = 6 }: TiltProps) {
       onMouseMove={handleMove}
       onMouseLeave={reset}
       style={{ rotateX, rotateY, transformPerspective: 900, transformStyle: 'preserve-3d' }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+/* ───────────────  Magnetic hover (buttons / small targets)  ─────────────── */
+
+interface MagneticProps {
+  children: ReactNode
+  className?: string
+  /** How strongly the element is pulled toward the cursor (0–1). */
+  strength?: number
+}
+
+/**
+ * Wraps an element so it drifts toward the cursor on hover and springs back on
+ * leave. Honors reduced-motion by disabling the pull entirely.
+ */
+export function Magnetic({ children, className, strength = 0.4 }: MagneticProps) {
+  const ref = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
+  const x = useMotionValue(0)
+  const y = useMotionValue(0)
+  const springX = useSpring(x, { stiffness: 260, damping: 18, mass: 0.4 })
+  const springY = useSpring(y, { stiffness: 260, damping: 18, mass: 0.4 })
+
+  function handleMove(e: React.MouseEvent<HTMLDivElement>) {
+    if (prefersReducedMotion) return
+    const rect = ref.current?.getBoundingClientRect()
+    if (!rect) return
+    x.set((e.clientX - (rect.left + rect.width / 2)) * strength)
+    y.set((e.clientY - (rect.top + rect.height / 2)) * strength)
+  }
+
+  function reset() {
+    x.set(0)
+    y.set(0)
+  }
+
+  return (
+    <motion.div
+      ref={ref}
+      onMouseMove={handleMove}
+      onMouseLeave={reset}
+      style={{ x: springX, y: springY }}
       className={className}
     >
       {children}

@@ -40,7 +40,7 @@ export function Achievements() {
                 {achievementsByType.Competition.map((achievement) => (
                   <div
                     key={achievement.id}
-                    className="group rounded-xl border border-border glass overflow-hidden card-hover hover:border-accent"
+                    className="spotlight group rounded-xl border border-border glass overflow-hidden card-hover hover:border-accent"
                   >
                     {achievement.image && (
                       <div className="relative h-48 overflow-hidden bg-muted/50">
@@ -86,7 +86,7 @@ export function Achievements() {
                 {achievementsByType.Contest.map((achievement) => (
                   <div
                     key={achievement.id}
-                    className="group rounded-xl border border-border glass overflow-hidden card-hover hover:border-accent"
+                    className="spotlight group rounded-xl border border-border glass overflow-hidden card-hover hover:border-accent"
                   >
                     {achievement.image && (
                       <div className="relative h-48 overflow-hidden bg-muted/50">
@@ -132,7 +132,7 @@ export function Achievements() {
                 {achievementsByType.Rating.map((achievement) => (
                   <div
                     key={achievement.id}
-                    className="p-6 rounded-xl border border-border glass card-hover hover:border-accent space-y-2 text-center"
+                    className="spotlight p-6 rounded-xl border border-border glass card-hover hover:border-accent space-y-2 text-center"
                   >
                     <h3 className="text-lg font-bold hover:text-accent transition-colors">
                       {achievement.title}

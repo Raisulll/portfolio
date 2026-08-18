@@ -1,0 +1,349 @@
+\documentclass[a4paper,hidelinks,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage{multirow}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+%\usepackage[sfdefault]{AlegreyaSans}
+%\usepackage[math]{iwona}
+\usepackage[sfdefault,lf]{carlito}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.380in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{0.75in}
+\addtolength{\topmargin}{-0.4 in}
+\addtolength{\textheight}{0.8in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\normalsize{
+    \textbf{#1:}{ #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{0pt}\item
+    \begin{tabular*}{0.97\textwidth} {l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth} {l@{\extracolsep{\fill}}r}
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItemWithoutTitle{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \huge MD \textbf{RAISUL} ISLAM RAHAD & Email: \href{mailto:raisul.dev@gmail.com}{raisul.dev@gmail.com} \\
+  Software Engineer | B.Sc. in CSE, MIST (2026) & Phone: +8801778665529 \\
+  Dhaka, Bangladesh & Portfolio: \href{https://raisulrahad.vercel.app/}{raisulrahad.vercel.app} \\
+  GitHub: \href{https://github.com/Raisulll}{github.com/Raisulll} & LinkedIn: \href{https://www.linkedin.com/in/raisul-islam-rahad}{linkedin.com/in/raisul-islam-rahad}
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Military Institute of Science and Technology (MIST)}{Dhaka, Bangladesh}
+        {B.Sc. in Computer Science \& Engineering}  
+{CGPA: 3.43 / 4.00}
+{May 2022 -- June 2026}
+\vspace{-25pt}\item[]
+\item[] \textbf{Relevant Coursework:} Data Structures \& Algorithms, Operating Systems, Database Management Systems, Computer Networking, Software Engineering, Artificial Intelligence, Digital Image Processing, Compiler Design
+
+    \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------------
+\vspace{-5pt}
+\section{Skills}
+\resumeSubHeadingListStart
+  \item \textbf{Languages:} C/C++ (proficient), Python (proficient), JavaScript (proficient), Java (familiar), SQL, Bash
+  \item \textbf{Web \& Backend:} React.js, Node.js, Express.js, REST API, JWT, OAuth, WebSocket
+  \item \textbf{Databases:} PostgreSQL, OracleDB, Firebase, Supabase
+  \item \textbf{Robotics \& Embedded:} ROS, OpenCV, Jetson Xavier NX, ESP32, Teensy, ZED Stereo Camera
+  \item \textbf{Tools \& Platforms:} Git, GitHub, Linux, LaTeX, Cisco Packet Tracer, Flutter
+\resumeSubHeadingListEnd
+
+
+% %-----------EXPERIENCE-----------------
+% \vspace{-5pt}
+% \section{Experience}
+% \resumeSubHeadingListStart
+
+% \vspace{0pt}\item
+% \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{Imperial Trends} & {Leicester, United Kingdom (UK) -- Remote} \\
+% \end{tabular*}\vspace{-5pt}
+% \vspace{-1pt}\item[]
+% \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{Software Developer} & \textit{June 2026 -- Present} \\
+% \end{tabular*}\vspace{-3pt}
+% \begin{itemize}[leftmargin=20pt]
+%   \item Developed web applications using React.js, Node.js, and PostgreSQL with RESTful APIs and secure authentication
+%   \item Optimized database queries, implemented CI/CD pipelines, and contributed to scalable software solutions
+% \end{itemize}\vspace{-5pt}
+
+% \vspace{0pt}\item
+% \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{MIST Mars Rover Society} & {Dhaka, Bangladesh} \\
+% \end{tabular*}\vspace{-5pt}
+% \vspace{-1pt}\item[]
+% \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{Team Lead} & \textit{June 2025 -- June 2026} \\
+% \end{tabular*}\vspace{-3pt}
+% \begin{itemize}[leftmargin=20pt]
+%   \item Led 50+ members across mechanical, electrical, and software teams to develop a competitive Mars rover
+%   \item Led a 12-member crew at URC 2026, securing 11th place among 38 finalists worldwide
+% \end{itemize}\vspace{-5pt}
+
+% \vspace{-1pt}\item[]
+% \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%   \hspace{10pt}\textit{Software \& Communication Co-Lead / Mentor} & \textit{\small Mar 2024 -- May 2025} \\
+% \end{tabular*}\vspace{-3pt}
+% \begin{itemize}[leftmargin=20pt]
+%   \item Developed ROS/C++ software for autonomous navigation, robotic arm control, and real-time communication
+%   \item Designed rover networking infrastructure and mentored members in ROS and embedded systems
+% \end{itemize}\vspace{-5pt}
+
+% \vspace{0pt}\item
+% \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{MIST Computer Club} & {Dhaka, Bangladesh} \\
+% \end{tabular*}\vspace{-5pt}
+% \vspace{-1pt}\item[]
+% \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{Executive Director} & \textit{June 2025 -- June 2026} \\
+% \end{tabular*}\vspace{-3pt}
+% \begin{itemize}[leftmargin=20pt]
+%   \item Led club operations, competitive programming workshops, hackathons, and inter-university contests
+%   \item Organized MIST Talent Hunt 2025, coordinating programming and CTF contests, volunteers, and technical infrastructure
+% \end{itemize}\vspace{-5pt}
+
+% \vspace{-1pt}\item[]
+% \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%   \hspace{10pt}\textit{Vice President / Programming Mentor} & \textit{\small Apr 2023 -- June 2025} \\
+% \end{tabular*}\vspace{-3pt}
+% \begin{itemize}[leftmargin=20pt]
+%   \item Mentored students in data structures, graph algorithms, dynamic programming, and competitive programming
+%   \item Co-organized programming contests and supported major cybersecurity events including MIST LeetCon and Cyber Drill
+% \end{itemize}\vspace{-5pt}
+
+% \resumeSubHeadingListEnd
+
+
+
+
+%-----------EXPERIENCE-----------------
+ \vspace{-5pt} \section{Experience} \resumeSubHeadingListStart \vspace{0pt}\item \begin{tabular*}{0.97\textwidth} {l@{\extracolsep{\fill}}r} \textbf{Imperial Trends} & {Leicester, United Kingdom (UK) -- Remote} \\ \end{tabular*}\vspace{-5pt} \vspace{-1pt}\item[] \begin{tabular*}{0.97\textwidth} {l@{\extracolsep{\fill}}r} \textbf{Software Developer} & \textit{June 2026 -- Present} \\ \end{tabular*}\vspace{-3pt} \begin{itemize}[leftmargin=20pt] \item Developed and maintained web applications using React.js, Node.js, and PostgreSQL, implementing RESTful APIs and secure authentication mechanisms \item Collaborated with cross-functional teams to design and deploy scalable software solutions, improving system performance and user experience \item Conducted code reviews, implemented CI/CD pipelines, and optimized database queries to enhance application efficiency and reliability \end{itemize}\vspace{-5pt} \vspace{0pt}\item \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r} \textbf{MIST Mars Rover Society} & {Dhaka, Bangladesh} \\ \end{tabular*}\vspace{-5pt} \vspace{-1pt}\item[] \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r} \textbf{Team Lead} & \textit{June 2025 -- June 2026} \\ \end{tabular*}\vspace{-3pt} \begin{itemize}[leftmargin=20pt] \item Led 50+ members across mechanical, electrical, and software teams to develop and deploy a Mars rover for international competitions \item Represented MIST Mongol Barota at URC 2026 with a 12-member crew, securing 11th place among 38 finalists worldwide \item Managed project timelines, technical reviews, and international competition logistics \end{itemize}\vspace{-5pt} \vspace{-1pt}\item[] \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r} \hspace{10pt}\textit{Software \& Communication Co-Lead / Mentor} & \textit{\small Mar 2024 -- May 2025} \\ \end{tabular*}\vspace{-3pt} \begin{itemize}[leftmargin=20pt] \item Developed rover software using ROS and C++ for autonomous navigation, robotic arm control, and real-time communication \item Designed rover networking infrastructure and mentored junior members in ROS and embedded systems \end{itemize}\vspace{-5pt} \vspace{-1pt}\item[] \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r} \hspace{10pt}\textit{Software \& Communication Team Member} & \textit{\small Oct 2022 -- Mar 2024} \\ \end{tabular*}\vspace{-3pt} \begin{itemize}[leftmargin=20pt] \item Contributed to rover networking, real-time communication, and autonomous navigation testing \end{itemize}\vspace{-5pt} \vspace{0pt}\item \begin{tabular*}{0.97\textwidth} {l@{\extracolsep{\fill}}r} \textbf{MIST Computer Club} & {Dhaka, Bangladesh} \\ \end{tabular*}\vspace{-5pt} \vspace{-1pt}\item[] \begin{tabular*}{0.97\textwidth} {l@{\extracolsep{\fill}}r} \textbf{Executive Director} & \textit{June 2025 -- June 2026} \\ \end{tabular*}\vspace{-3pt} \begin{itemize}[leftmargin=20pt] \item Oversee all club operations, including competitive programming workshops, hackathons, and inter-university contests \item Organized MIST Talent Hunt 2025 — coordinated competitive programming and CTF contests, managed volunteer teams and technical infrastructure \end{itemize}\vspace{-5pt} \vspace{-1pt}\item[] \begin{tabular*}{0.97\textwidth} {l@{\extracolsep{\fill}}r} \hspace{10pt}\textit{Vice President / Programming Mentor} & \textit{\small Apr 2023 -- June 2025} \\ \end{tabular*}\vspace{-3pt} \begin{itemize}[leftmargin=20pt] \item Mentored students in competitive programming, covering data structures, graph algorithms, and dynamic programming \item Co-organized intra-university programming contests and set contest problems \item Supported event coordination for MIST LeetCon 2023 (international cybersecurity conference) and Cyber Drill 2023 \end{itemize}\vspace{-5pt} \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\vspace{-14pt}
+\section{Projects}
+\resumeSubHeadingListStart
+
+\vspace{0pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{iinwentory -- Inventory Management SaaS}
+Link (\href{https://iinwentory.com/}{https://iinwentory.com/}) &
+{} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textit{Technologies: React 19, TypeScript, Vite, Tailwind CSS, Express 5, Prisma, PostgreSQL, Supabase, Stripe} &
+\textit{Jun 2026 -- Present} \\
+\end{tabular*}\vspace{-4pt}
+\item[]
+Developed a full-stack inventory management SaaS as a monorepo, featuring QR-coded inventory items, hierarchical stock tracking, JWT-based authentication, image uploads, transactional emails, and Stripe-powered subscription billing. Built scalable REST APIs with Express and Prisma, and implemented a responsive web interface using React, TypeScript, Vite, Tailwind CSS, and Radix UI.
+
+\vspace{2pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Autonomous Trolley for Warehouse}
+Link (\href{https://raisulrahad.vercel.app/projects/autonomous-trolley}{https://raisulrahad.vercel.app/projects/autonomous-trolley}) &
+{} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textit{Technologies: ROS, OpenCV, ZED Stereo Camera, Jetson Xavier NX, Teensy, C++, Python} &
+\textit{Jun 2025 -- Sep 2025} \\
+\end{tabular*}\vspace{-4pt}
+\item[]
+Developed an autonomous warehouse trolley using stereo vision and ROS for intelligent navigation. Implemented obstacle detection and depth estimation with ZED camera data and OpenCV, and integrated real-time communication between Jetson Xavier NX and microcontroller for motion control and system coordination.
+
+\vspace{2pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{MIST Mongol Barota -- Robotics Team Website}
+Link (\href{https://mongol-barota.mist.ac.bd/}{https://mongol-barota.mist.ac.bd/}) &
+{} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textit{Technologies: React.js, TypeScript, Tailwind CSS, Node.js, REST API} &
+\textit{Oct 2025 -- Nov 2025} \\
+\end{tabular*}\vspace{-4pt}
+\item[]
+Developed and deployed the official website for MIST Mongol Barota, a competitive Mars rover team representing Bangladesh internationally. Built a responsive platform showcasing the team's rovers, competitions, achievements, research, sponsorship opportunities, and recruitment, with structured content and interactive navigation for team and public engagement.
+
+\vspace{2pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{PagePlay -- Interactive Online Book Portal}
+Link (\href{https://github.com/Raisulll/PagePlay}{https://github.com/Raisulll/PagePlay}) &
+{} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textit{Technologies: React.js, Tailwind CSS, Node.js, Express.js, PostgreSQL, OAuth, Chatbot API} &
+\textit{Dec 2024 -- Mar 2025} \\
+\end{tabular*}\vspace{-4pt}
+\item[]
+Built a full-stack web platform for eBook browsing, reviews, and user interaction. Designed RESTful APIs and relational database schemas to support scalable content management, user authentication, and chatbot-based assistance.
+
+\vspace{2pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Codebook -- AI-Assisted Code Learning Platform}
+Link (\href{https://github.com/Raisulll/CBook}{https://github.com/Raisulll/CBook}) &
+{} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textit{Technologies: Java, JavaFX, Firebase, Supabase PgVector, Judge0 API} &
+\textit{Nov 2023 -- Dec 2023} \\
+\end{tabular*}\vspace{-4pt}
+\item[]
+Developed an AI-assisted platform for code sharing, execution, and learning. Integrated online code execution, semantic code search, and AI-generated explanations to support collaborative programming and self-learning.
+
+\vspace{2pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{AI-Powered Surveillance Robot}
+Link (\href{https://raisulrahad.vercel.app/projects/surveillance-robot}{https://raisulrahad.vercel.app/projects/surveillance-robot}) &
+{} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textit{Technologies: ESP32-CAM, Flutter, WebSocket, Embedded Systems} &
+\textit{Aug 2024 -- Oct 2024} \\
+\end{tabular*}\vspace{-4pt}
+\item[]
+Developed a real-time surveillance robot with live video streaming and remote control. Implemented WebSocket-based communication between the embedded system and mobile application, along with snapshot analysis for AI-assisted user queries.
+
+\vspace{2pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{EyeCare -- Healthcare Management Platform}
+Link (\href{https://github.com/Raisulll/Eye-Care-DBMS-Project}{https://github.com/Raisulll/EyeCare}) &
+{} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textit{Technologies: React.js, Node.js, Express.js, OracleDB, JWT, REST API} &
+\textit{Aug 2024 -- Oct 2024} \\
+\end{tabular*}\vspace{-4pt}
+\item[]
+Developed a role-based healthcare platform supporting appointment scheduling and data management. Implemented secure authentication using JWT and designed normalized OracleDB schemas to support transactional operations and data consistency.
+
+\resumeSubHeadingListEnd
+
+% ----------AWARDS-----------------
+\vspace{-5pt}
+\section{Awards \& Achievements}
+\resumeSubHeadingListStart
+
+\vspace{0pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{First Runners-Up — Anatolian Rover Challenge (Türkiye)} & {2024} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+Achieved 2nd place among 22 finalist teams from multiple countries at METU, Ankara. Received a special award for \textbf{Best Team Structure} based on technical organization and system integration.\vspace{-1pt}
+
+\vspace{2pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{11th Place — University Rover Challenge (USA)} & {2026} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+Led team MIST Mongol Barota to \textbf{11th place} among 38 finalist teams selected from 128 applicants worldwide at URC 2026.\vspace{-1pt}
+
+\vspace{2pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{Top 15 Worldwide — University Rover Challenge (USA)} & {2025} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+Ranked 14th among 38 finalist teams worldwide at URC 2025. Contributed to networking, autonomous navigation, and robotic arm operation.\vspace{-1pt}
+
+\vspace{2pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{ICPC Asia Dhaka Regional Contest} & {2024} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+Competed in the ICPC Asia Dhaka Regional Contest 2024 as team \textit{MIST\_CodeCrafters} among 300+ teams nationwide.\vspace{-1pt}
+
+\vspace{2pt}\item
+\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{2nd Place — Independence Day Programming Contest} & {2023} \\
+\end{tabular*}\vspace{-5pt}
+\item[]
+Achieved 2nd position among 63 teams in a 5-hour onsite programming contest focused on data structures and algorithms.\vspace{-1pt}
+
+\resumeSubHeadingListEnd
+
+
+% -----------PROBLEM SOLVING-----------------
+\vspace{-5pt}
+\section{Problem Solving}
+\resumeSubHeadingListStart
+
+\item \textbf{500+ problems solved} across
+\href{https://codeforces.com/profile/raisul_rahad}{Codeforces} (Pupil, 1290),
+\href{https://www.codechef.com/users/raisul_rahad}{CodeChef} (3\(\star\), 1600),
+\href{https://leetcode.com/u/raisulll/}{LeetCode} (70+), and
+\href{https://vjudge.net/user/Raisul_Rahad}{VJudge}
+\item \textbf{Core competencies:} Arrays, Strings, Graph Traversal (BFS/DFS), Greedy Algorithms, Dynamic Programming, Recursion
+
+\resumeSubHeadingListEnd
+
+
+\end{document}

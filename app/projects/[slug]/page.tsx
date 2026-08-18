@@ -119,7 +119,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 font-medium text-accent-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30"
+                    className="btn-shine group inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 font-medium text-accent-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/30"
                   >
                     <GitHubIcon className="h-5 w-5" />
                     View Source
@@ -231,7 +231,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <Stagger className="grid gap-4 sm:grid-cols-2">
               {project.features.map((feature) => (
                 <StaggerItem key={feature}>
-                  <div className="group flex h-full items-start gap-3 rounded-xl border border-border bg-card/50 p-5 card-hover hover:border-accent">
+                  <div className="spotlight group flex h-full items-start gap-3 rounded-xl border border-border bg-card/50 p-5 card-hover hover:border-accent">
                     <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
                     <span className="leading-relaxed text-muted-foreground transition-colors group-hover:text-foreground">
                       {feature}
@@ -257,7 +257,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               <Stagger className="space-y-4">
                 {project.details.map((detail, index) => (
                   <StaggerItem key={detail.title}>
-                    <div className="group relative flex gap-5 rounded-2xl border border-border bg-card/50 p-6 card-hover hover:border-accent">
+                    <div className="spotlight group relative flex gap-5 rounded-2xl border border-border bg-card/50 p-6 card-hover hover:border-accent">
                       <span className="grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl bg-accent/10 font-heading text-lg font-bold text-accent">
                         {String(index + 1).padStart(2, '0')}
                       </span>
@@ -312,7 +312,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <Link
                 href={`/projects/${prevProject.slug}`}
-                className="group flex items-center gap-4 rounded-2xl border border-border bg-card/50 p-6 card-hover hover:border-accent"
+                className="spotlight group flex items-center gap-4 rounded-2xl border border-border bg-card/50 p-6 card-hover hover:border-accent"
               >
                 <ArrowLeft className="h-5 w-5 flex-shrink-0 text-accent transition-transform group-hover:-translate-x-1" />
                 <div>
@@ -325,7 +325,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
               <Link
                 href={`/projects/${nextProject.slug}`}
-                className="group flex items-center justify-between gap-4 rounded-2xl border border-border bg-card/50 p-6 text-left card-hover hover:border-accent md:justify-end md:text-right"
+                className="spotlight group flex items-center justify-between gap-4 rounded-2xl border border-border bg-card/50 p-6 text-left card-hover hover:border-accent md:justify-end md:text-right"
               >
                 <div>
                   <p className="text-sm text-muted-foreground">Next Project</p>

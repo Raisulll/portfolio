@@ -24,7 +24,7 @@ export function Highlights() {
             const { number, suffix } = parseValue(stat.value)
             return (
               <StaggerItem key={stat.label}>
-                <div className="group relative h-full overflow-hidden rounded-2xl border border-border bg-card/60 p-6 card-hover hover:border-accent">
+                <div className="spotlight group relative h-full overflow-hidden rounded-2xl border border-border bg-card/60 p-6 card-hover hover:border-accent">
                   <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-accent/10 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <div className="relative">
                     <div className="mb-4 inline-flex rounded-xl bg-accent/10 p-2.5 transition-colors group-hover:bg-accent/20">
