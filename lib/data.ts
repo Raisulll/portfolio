@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "MD Raisul Islam Rahad",
   email: "raisul.dev@gmail.com",
   location: "Dhaka, Bangladesh",
-  description: "Robotics Enthusiast & Full-Stack Developer",
+  description: "Embedded Software Engineer & Full-Stack Developer",
 };
 
 export const navLinks = [
@@ -670,11 +670,23 @@ export const featuredProjects: Project[] = featuredSlugs
 
 export const experience = [
   {
+    id: 0,
+    organization: 'Siliconova',
+    role: 'Embedded Software Engineer',
+    location: 'Dhaka, Bangladesh',
+    period: 'September 2026 - Present',
+    description:
+      'Designing and developing embedded software systems and contributing to hardware-software integration.',
+    highlights: [
+      'Developing and maintaining embedded software systems',
+    ],
+  },
+  {
     id: 1,
     organization: 'Imperial Trends',
     role: 'Software Developer',
     location: 'Leicester, United Kingdom — Remote',
-    period: 'June 2026 - Present',
+    period: 'June 2026 - September 2026',
     description:
       'Building and maintaining production web applications for a UK-based company as part of a remote, cross-functional team.',
     highlights: [

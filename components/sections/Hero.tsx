@@ -15,7 +15,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const roles = [
-  "Software Engineer",
+  "Embedded Software Engineer",
   "Full Stack Developer",
   "AI Enthusiast",
   "Robotics Enthusiast"
@@ -183,7 +183,7 @@ export function Hero() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
                 </span>
-                Aspiring Software Engineer
+                Embedded Software Engineer
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] sm:leading-[1.05] text-balance">
                 {siteConfig.name.split(' ').map((word, i) => (
@@ -206,8 +206,8 @@ export function Hero() {
               className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0"
               variants={item}
             >
-              I engineer scalable software — from full stack web platforms to
-              robotics systems built for international competition.
+              I engineer reliable embedded systems and scalable software — from
+              robotics built for international competition to full stack web platforms.
             </motion.p>
 
             {/* CTA Buttons */}
