@@ -4,8 +4,18 @@ import { Footer } from '@/components/Footer'
 import { Projects } from '@/components/sections/Projects'
 
 export const metadata: Metadata = {
-  title: 'Projects | MD Raisul Islam Rahad',
-  description: 'Explore my portfolio of robotics projects, web applications, and AI-powered systems.',
+  title: "Raisul's Projects | MD Raisul Islam Rahad — Portfolio",
+  description:
+    "Explore the robotics, embedded systems, and web development projects of Raisul Islam Rahad — including Mars Rover systems for URC 2026, autonomous robots, and full-stack web platforms.",
+  alternates: {
+    canonical: 'https://raisulrahad.vercel.app/projects',
+  },
+  openGraph: {
+    title: "Raisul's Projects | MD Raisul Islam Rahad",
+    description: "Robotics, embedded systems, and web projects by Raisul Islam Rahad.",
+    url: 'https://raisulrahad.vercel.app/projects',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+  },
 }
 
 export default function ProjectsPage() {

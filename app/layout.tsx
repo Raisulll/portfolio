@@ -23,23 +23,81 @@ const firaCode = Fira_Code({
 })
 
 export const metadata: Metadata = {
-  title: "MD Raisul Islam Rahad | Robotics Engineer & Full-Stack Developer",
+  title: "MD Raisul Islam Rahad | Embedded Software Engineer at Siliconova",
   description:
-    "Portfolio of MD Raisul Islam Rahad - Robotics engineer, competitive programmer, and full-stack developer. URC 2026 participant, MIST Mars Rover Society lead.",
-  generator: "v0.app",
+    "Portfolio of MD Raisul Islam Rahad — Embedded Software Engineer at Siliconova and Full-Stack Developer. URC 2026 (11th globally) finalist, MIST Mars Rover Society lead, ICPC contestant. Building reliable embedded systems and scalable software.",
+  metadataBase: new URL("https://raisulrahad.vercel.app"),
   keywords: [
-    "robotics",
+    // Name variants — primary ranking signal
+    "Raisul",
+    "Raisul Rahad",
+    "Raisul Islam",
+    "MD Raisul",
+    "MD Raisul Islam Rahad",
+    "Md. Raisul Islam Rahad",
+    "raisulrahad",
+    "raisul islam rahad",
+    // Role keywords
+    "embedded software engineer",
+    "embedded software engineer Bangladesh",
+    "Siliconova",
+    "Siliconova engineer",
+    "robotics engineer",
     "full-stack developer",
-    "competitive programming",
-    "Mars Rover Challenge",
+    "competitive programmer",
+    // Achievements
+    "University Rover Challenge",
+    "URC 2026",
+    "URC 2026 Bangladesh",
+    "Mars Rover Challenge Bangladesh",
+    "MIST Mars Rover Society",
+    "MIST",
+    "ICPC",
+    "ICPC Bangladesh",
     "autonomous systems",
+    "Bangladesh developer",
+    "Bangladeshi software engineer",
+    "portfolio raisul",
   ],
-  authors: [{ name: "MD Raisul Islam Rahad" }],
+  authors: [{ name: "MD Raisul Islam Rahad", url: "https://raisulrahad.vercel.app" }],
+  creator: "MD Raisul Islam Rahad",
+  publisher: "MD Raisul Islam Rahad",
+  alternates: {
+    canonical: "https://raisulrahad.vercel.app",
+  },
   openGraph: {
-    title: "MD Raisul Islam Rahad | Portfolio",
-    description: "Robotics enthusiast and full-stack developer",
+    title: "MD Raisul Islam Rahad | Embedded Software Engineer at Siliconova",
+    description:
+      "Embedded Software Engineer at Siliconova & Full-Stack Developer. URC 2026 finalist (11th globally), MIST Mars Rover Society lead, ICPC contestant. Building reliable embedded systems and scalable web platforms.",
+    url: "https://raisulrahad.vercel.app",
+    siteName: "Raisul Islam Rahad — Portfolio",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MD Raisul Islam Rahad — Embedded Software Engineer at Siliconova",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MD Raisul Islam Rahad | Embedded Software Engineer at Siliconova",
+    description:
+      "Embedded Software Engineer at Siliconova & Full-Stack Developer. URC 2026 finalist (11th globally), MIST Mars Rover Society lead, ICPC contestant.",
+    images: ["/og-image.jpg"],
+    creator: "@raisulrahad",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
   },
 };
 
@@ -66,6 +124,7 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${poppins.variable} ${firaCode.variable}`}
     >
       <head>
+        {/* Theme init */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -78,6 +137,70 @@ export default function RootLayout({
                 }
               } catch (e) {}
             `,
+          }}
+        />
+        {/* JSON-LD Person structured data — primary Google ranking signal for name searches */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "@id": "https://raisulrahad.vercel.app/#person",
+              name: "MD Raisul Islam Rahad",
+              alternateName: ["Raisul", "Raisul Rahad", "Raisul Islam", "MD Raisul", "Md. Raisul Islam Rahad"],
+              url: "https://raisulrahad.vercel.app",
+              image: "https://raisulrahad.vercel.app/images/profile_headshot.png",
+              jobTitle: "Embedded Software Engineer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Siliconova",
+              },
+              alumniOf: {
+                "@type": "CollegeOrUniversity",
+                name: "Military Institute of Science and Technology (MIST)",
+                alternateName: "MIST",
+              },
+              nationality: {
+                "@type": "Country",
+                name: "Bangladesh",
+              },
+              knowsAbout: [
+                "Embedded Systems",
+                "Robotics",
+                "Full-Stack Development",
+                "Competitive Programming",
+                "Autonomous Systems",
+                "Mars Rover Design",
+              ],
+              sameAs: [
+                "https://github.com/Raisulll",
+                "https://www.linkedin.com/in/raisulrahad",
+              ],
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://raisulrahad.vercel.app",
+              },
+            }),
+          }}
+        />
+        {/* WebSite structured data — enables Google Sitelinks & search box */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://raisulrahad.vercel.app/#website",
+              url: "https://raisulrahad.vercel.app",
+              name: "Raisul Islam Rahad — Portfolio",
+              description:
+                "Portfolio of MD Raisul Islam Rahad — Embedded Software Engineer at Siliconova, URC 2026 finalist, Mars Rover Society Lead.",
+              author: {
+                "@id": "https://raisulrahad.vercel.app/#person",
+              },
+              inLanguage: "en-US",
+            }),
           }}
         />
       </head>
