@@ -90,6 +90,9 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
     creator: "@raisulrahad",
   },
+  verification: {
+    google: "d4ZedE-6ZYRD3a7aN7WLygvy--J0w1MEwW9w9Q-KHkA",
+  },
   robots: {
     index: true,
     follow: true,
