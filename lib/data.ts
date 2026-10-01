@@ -671,7 +671,9 @@ export const featuredProjects: Project[] = featuredSlugs
 export const experience = [
   {
     id: 0,
+    type: 'professional' as const,
     organization: 'Siliconova',
+    url: 'https://www.siliconova.com/',
     role: 'Embedded Software Engineer',
     location: 'Dhaka, Bangladesh',
     period: 'September 2026 - Present',
@@ -683,7 +685,9 @@ export const experience = [
   },
   {
     id: 1,
+    type: 'professional' as const,
     organization: 'Imperial Trends',
+    url: null,
     role: 'Software Developer',
     location: 'Leicester, United Kingdom — Remote',
     period: 'June 2026 - September 2026',
@@ -697,7 +701,9 @@ export const experience = [
   },
   {
     id: 2,
+    type: 'extracurricular' as const,
     organization: 'MIST Mars Rover Society',
+    url: null,
     role: 'Team Lead',
     location: 'Dhaka, Bangladesh',
     period: 'June 2025 - June 2026',
@@ -711,7 +717,9 @@ export const experience = [
   },
   {
     id: 3,
+    type: 'extracurricular' as const,
     organization: 'MIST Mars Rover Society',
+    url: null,
     role: 'Software & Communication Co-Lead / Mentor',
     location: 'Dhaka, Bangladesh',
     period: 'March 2024 - May 2025',
@@ -724,7 +732,9 @@ export const experience = [
   },
   {
     id: 4,
+    type: 'extracurricular' as const,
     organization: 'MIST Mars Rover Society',
+    url: null,
     role: 'Software & Communication Team Member',
     location: 'Dhaka, Bangladesh',
     period: 'October 2022 - March 2024',
@@ -735,7 +745,9 @@ export const experience = [
   },
   {
     id: 5,
+    type: 'extracurricular' as const,
     organization: 'MIST Computer Club',
+    url: null,
     role: 'Executive Director',
     location: 'Dhaka, Bangladesh',
     period: 'June 2025 - June 2026',
@@ -748,7 +760,9 @@ export const experience = [
   },
   {
     id: 6,
+    type: 'extracurricular' as const,
     organization: 'MIST Computer Club',
+    url: null,
     role: 'Vice President / Programming Mentor',
     location: 'Dhaka, Bangladesh',
     period: 'April 2023 - June 2025',

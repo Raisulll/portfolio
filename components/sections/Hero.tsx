@@ -222,12 +222,12 @@ export function Hero() {
                 </Link>
               </Magnetic>
               <a
-                href="https://drive.google.com/uc?export=download&id=10Ew7riHhJ0l4VA81fsVY_sUdJAGGg5uD"
-                download
+                href="/Raisul_Islam_CV.pdf"
+                download="Raisul_Islam_CV.pdf"
                 className="group inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg font-medium transition-all duration-200 hover:-translate-y-0.5 hover:bg-muted/50 hover:border-accent"
               >
                 <Download className="w-4 h-4 mr-2 transition-transform group-hover:translate-y-0.5" />
-                Download Resume
+                Download CV
               </a>
             </motion.div>
 
